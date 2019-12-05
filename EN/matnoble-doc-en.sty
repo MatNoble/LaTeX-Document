@@ -1,0 +1,514 @@
+%
+% 个人自用文档样式
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{matnoble-doc-en}[2019/12/02 v1.2 updated by Ross]
+%% Blog
+% https://matnoble.github.io
+% https://www.hustmatnoble.tk
+%% YouTube
+% https://www.youtube.com/channel/UCE2xXeAHNSI0No9oR7fQKCQ?sub_confirmation=1
+%% Gmail
+% hustmatnoble@gmail.com
+%% GitHub
+% https://github.com/MatNoble
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+
+% \usepackage{mathptmx} % 打印
+\usepackage{charter} % 屏读
+
+\RequirePackage{amsmath,amsthm,amsfonts,amssymb, bm}
+% 页面设置
+\RequirePackage{geometry}
+\RequirePackage{calrsfs, wasysym, verbatim, empheq}
+\RequirePackage[nottoc]{tocbibind}
+% 代码高亮
+\RequirePackage{minted}
+\usemintedstyle{emacs}
+\renewcommand\listoflistingscaption{List of source codes}
+
+\RequirePackage{titlesec}
+\RequirePackage{titletoc}
+
+% 代码提示
+\RequirePackage{listings}
+% 设置颜色
+\RequirePackage{xcolor-material}
+\colorlet{PrimaryColor}{GoogleBlue}
+\colorlet{mc}{GoogleRed}
+
+% 更加现代定理、引用提示
+\RequirePackage{tcolorbox}
+%%% tcolorbox %%%
+\tcbuselibrary{theorems}
+\tcbuselibrary{skins}
+\tcbsetforeverylayer{enhanced} 
+% 表格
+\RequirePackage{tabularx,array}
+%% 长表格
+\RequirePackage{longtable}
+%% booktabs 提供了\toprule 等命令.
+\RequirePackage{booktabs}
+%% multirow 支持在表格中跨行
+\RequirePackage{multirow}
+%% 调整间隔, 让表格更好看些
+\RequirePackage{bigstrut}
+%% 在跨行表格中输入定界符
+\RequirePackage{bigdelim}
+% 界面微调算法, 更好看
+\RequirePackage{microtype}
+% 首行缩进
+\RequirePackage{indentfirst}
+% 设置浮动体的标题
+\RequirePackage{subcaption}
+\RequirePackage{float}
+% ref
+\RequirePackage{hyperref}
+% 页眉
+\RequirePackage{fancyhdr}
+% item
+\RequirePackage[shortlabels,inline]{enumitem}
+\setlist{nolistsep}
+
+\RequirePackage[title,titletoc]{appendix}
+
+% 引入脚注的包
+\RequirePackage[marginal]{footmisc}
+\renewcommand{\thefootnote}{}
+
+\geometry{tmargin=.85in, bmargin=.85in, lmargin=.75in, rmargin = .75in}
+% 行距设置
+% \renewcommand*{\baselinestretch}{1.05}
+\RequirePackage{setspace}
+\setstretch{1.2}
+\setlength{\parskip}{3mm}
+\setlength{\parindent}{2em}
+
+\fancyhf{}
+\pagestyle{fancy}
+% \fancyhead[L]{\textcolor{PrimaryColor}{\leftmark}}
+\fancyfoot[C]{\footnotesize\textcolor{MaterialGrey}{\thepage}}
+% \fancyhead[R]{\textcolor{PrimaryColor}{\rightmark}}
+\renewcommand{\headrule}{\color{PrimaryColor}\hrule width\textwidth height\headrulewidth\hfill}
+\renewcommand{\headrulewidth}{1.2pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newtheoremstyle{plain}{3pt}{3pt}{\itshape}{}{\color{PrimaryColor}\bfseries}{}{0.5em}{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\headrule}{\hrule height\headrulewidth\hfill}
+  \fancyhf{}%
+  \fancyfoot[C]{\footnotesize \textcolor{MaterialGrey}{\thepage}}%
+}
+
+% 关于图片 graphicx
+\RequirePackage{graphicx}
+ % 如果图片没有指定后缀, 依次按下列顺序搜索
+\DeclareGraphicsExtensions{.eps,.pdf,.jpg,.png}
+ % 设置图表搜索路径, 可以给图表文件夹取如下名字
+\graphicspath{{figures/}{figure/}{pictures/}%
+  {picture/}{pic/}{pics/}{image/}{images/}}
+
+% caption settings 
+\RequirePackage[font=small, labelfont={bf, color=PrimaryColor}]{caption}
+\captionsetup{labelsep=quad}
+\captionsetup[figure]{position=bottom,skip={2pt}}
+\captionsetup[table]{position=top,skip={2pt}}
+
+\allowdisplaybreaks
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+        
+\newtheoremstyle{thmm}{1.5ex plus 1ex minus .2ex}{1.5ex plus 1ex minus
+.2ex}{\rmfamily}{}{\bfseries}{}{1em}{}
+\theoremstyle{thmm}
+\newtcbtheorem[number within=section]{thm}{\bf Theorem}{
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialGreen50,
+  colframe=GoogleGreen,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=GoogleGreen}
+}{}
+\newtcbtheorem[number within=section]{lem}{\bf Lemma}{
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialYellow50,
+  colframe=GoogleYellow,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=GoogleYellow}
+}{}
+\newtcbtheorem[number within=section]{cor}{\bf Corollary}{
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialRed50,
+  colframe=GoogleRed,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=GoogleRed}
+}{}
+\theoremstyle{definition} %
+\newtcbtheorem[number within=section]{defn}{\bf Definition}{
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialBlue50,
+  colframe=GoogleBlue,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=GoogleBlue}
+}{}
+\newtheorem{exa}{Example}[section]
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}[section]
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}
+
+\renewenvironment{proof}[1][Proof]{\noindent\textit{#1. } }{\hfill$\square$}
+\def \endproof{\vrule height8pt width 5pt depth 0pt}
+\def\refe#1{(\ref{#1})}
+\def\proof{\noindent{\bf Proof.}\hskip2mm}
+
+\newcommand\createtext{Created: }%
+\newcommand\updatetext{Last Updated: }%
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\renewcommand{\contentsname}{\LARGE \textcolor{PrimaryColor}{Contents}}
+\titleformat{\section}
+{\Large\bfseries\centering\color{PrimaryColor}}{\thesection.}{0.5em}{}
+
+\newtcolorbox{mybox}[2][]{colbacktitle=red!10!white, colback=blue!10!white,coltitle=red!70!black, title={#2},fonttitle=\bfseries,#1}
+
+%%% 链接设置 %%%
+\hypersetup{
+  colorlinks=true,
+  linkcolor=GoogleRed,
+  urlcolor=GoogleBlue,
+  filecolor=GoogleGreen,
+}
+
+%%% 代码高亮设置 %%%
+\tcbuselibrary{listings}
+
+\lstset{
+  frame=single,
+  frameround=tttt,
+  framesep=1pt,
+  framextopmargin=6pt,
+  framexbottommargin=6pt,
+  tabsize=4,
+  breaklines=true,
+  upquote=true,
+  captionpos=b,
+  basicstyle=\footnotesize,
+  backgroundcolor=\color{MaterialBlue50},
+  rulecolor=\color{MaterialBlue},
+  identifierstyle=\color{MaterialBlue800},
+  commentstyle=\itshape\color{MaterialGreen700},
+  stringstyle=\bfseries\color{MaterialAmber800},
+  keywordstyle=\bfseries\color{MaterialPurple700},
+  numberstyle=\bfseries\color{MaterialGrey800},
+}
+
+\RequirePackage{accents}
+\newcommand{\dbtilde}[1]{\accentset{\approx}{#1}}
+\newcommand{\Cdot}{\boldsymbol{\cdot}}
+% mathbb
+\newcommand{\bba}{\mathbb{a}}
+\newcommand{\bbb}{\mathbb{b}}
+\newcommand{\bbc}{\mathbb{c}}
+\newcommand{\bbd}{\mathbb{d}}
+\newcommand{\bbe}{\mathbb{e}}
+\newcommand{\bbf}{\mathbb{f}}
+\newcommand{\bbg}{\mathbb{g}}
+\newcommand{\bbh}{\mathbb{h}}
+\newcommand{\bbi}{\mathbb{i}}
+\newcommand{\bbj}{\mathbb{j}}
+\newcommand{\bbk}{\mathbb{k}}
+\newcommand{\bbl}{\mathbb{l}}
+\newcommand{\bbm}{\mathbb{m}}
+\newcommand{\bbn}{\mathbb{n}}
+\newcommand{\bbo}{\mathbb{o}}
+\newcommand{\bbp}{\mathbb{p}}
+\newcommand{\bbq}{\mathbb{q}}
+\newcommand{\bbr}{\mathbb{r}}
+\newcommand{\bbs}{\mathbb{s}}
+\newcommand{\bbt}{\mathbb{t}}
+\newcommand{\bbu}{\mathbb{u}}
+\newcommand{\bbv}{\mathbb{v}}
+\newcommand{\bbw}{\mathbb{w}}
+\newcommand{\bbx}{\mathbb{x}}
+\newcommand{\bby}{\mathbb{y}}
+\newcommand{\bbz}{\mathbb{z}}
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+% mathbf
+\newcommand{\bfa}{\mathbf{a}}
+\newcommand{\bfb}{\mathbf{b}}
+\newcommand{\bfc}{\mathbf{c}}
+\newcommand{\bfd}{\mathbf{d}}
+\newcommand{\bfe}{\mathbf{e}}
+\newcommand{\bff}{\mathbf{f}}
+\newcommand{\bfg}{\mathbf{g}}
+\newcommand{\bfh}{\mathbf{h}}
+\newcommand{\bfi}{\mathbf{i}}
+\newcommand{\bfj}{\mathbf{j}}
+\newcommand{\bfk}{\mathbf{k}}
+\newcommand{\bfl}{\mathbf{l}}
+\newcommand{\bfm}{\mathbf{m}}
+\newcommand{\bfn}{\mathbf{n}}
+\newcommand{\bfo}{\mathbf{o}}
+\newcommand{\bfp}{\mathbf{p}}
+\newcommand{\bfq}{\mathbf{q}}
+\newcommand{\bfr}{\mathbf{r}}
+\newcommand{\bfs}{\mathbf{s}}
+\newcommand{\bft}{\mathbf{t}}
+\newcommand{\bfu}{\mathbf{u}}
+\newcommand{\bfv}{\mathbf{v}}
+\newcommand{\bfw}{\mathbf{w}}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\bfy}{\mathbf{y}}
+\newcommand{\bfz}{\mathbf{z}}
+\newcommand{\bfA}{\mathbf{A}}
+\newcommand{\bfB}{\mathbf{B}}
+\newcommand{\bfC}{\mathbf{C}}
+\newcommand{\bfD}{\mathbf{D}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfG}{\mathbf{G}}
+\newcommand{\bfH}{\mathbf{H}}
+\newcommand{\bfI}{\mathbf{I}}
+\newcommand{\bfJ}{\mathbf{J}}
+\newcommand{\bfK}{\mathbf{K}}
+\newcommand{\bfL}{\mathbf{L}}
+\newcommand{\bfM}{\mathbf{M}}
+\newcommand{\bfN}{\mathbf{N}}
+\newcommand{\bfO}{\mathbf{O}}
+\newcommand{\bfP}{\mathbf{P}}
+\newcommand{\bfQ}{\mathbf{Q}}
+\newcommand{\bfR}{\mathbf{R}}
+\newcommand{\bfS}{\mathbf{S}}
+\newcommand{\bfT}{\mathbf{T}}
+\newcommand{\bfU}{\mathbf{U}}
+\newcommand{\bfV}{\mathbf{V}}
+\newcommand{\bfW}{\mathbf{W}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+% mathbfit (bm)
+\newcommand{\bma}{\bm{a}}
+\newcommand{\bmb}{\bm{b}}
+\newcommand{\bmc}{\bm{c}}
+\newcommand{\bmd}{\bm{d}}
+\newcommand{\bme}{\bm{e}}
+\newcommand{\bmf}{\bm{f}}
+\newcommand{\bmg}{\bm{g}}
+\newcommand{\bmh}{\bm{h}}
+\newcommand{\bmi}{\bm{i}}
+\newcommand{\bmj}{\bm{j}}
+\newcommand{\bmk}{\bm{k}}
+\newcommand{\bml}{\bm{l}}
+\newcommand{\bmm}{\bm{m}}
+\newcommand{\bmn}{\bm{n}}
+\newcommand{\bmo}{\bm{o}}
+\newcommand{\bmp}{\bm{p}}
+\newcommand{\bmq}{\bm{q}}
+\newcommand{\bmr}{\bm{r}}
+\newcommand{\bms}{\bm{s}}
+\newcommand{\bmt}{\bm{t}}
+\newcommand{\bmu}{\bm{u}}
+\newcommand{\bmv}{\bm{v}}
+\newcommand{\bmw}{\bm{w}}
+\newcommand{\bmx}{\bm{x}}
+\newcommand{\bmy}{\bm{y}}
+\newcommand{\bmz}{\bm{z}}
+\newcommand{\bmA}{\bm{A}}
+\newcommand{\bmB}{\bm{B}}
+\newcommand{\bmC}{\bm{C}}
+\newcommand{\bmD}{\bm{D}}
+\newcommand{\bmE}{\bm{E}}
+\newcommand{\bmF}{\bm{F}}
+\newcommand{\bmG}{\bm{G}}
+\newcommand{\bmH}{\bm{H}}
+\newcommand{\bmI}{\bm{I}}
+\newcommand{\bmJ}{\bm{J}}
+\newcommand{\bmK}{\bm{K}}
+\newcommand{\bmL}{\bm{L}}
+\newcommand{\bmM}{\bm{M}}
+\newcommand{\bmN}{\bm{N}}
+\newcommand{\bmO}{\bm{O}}
+\newcommand{\bmP}{\bm{P}}
+\newcommand{\bmQ}{\bm{Q}}
+\newcommand{\bmR}{\bm{R}}
+\newcommand{\bmS}{\bm{S}}
+\newcommand{\bmT}{\bm{T}}
+\newcommand{\bmU}{\bm{U}}
+\newcommand{\bmV}{\bm{V}}
+\newcommand{\bmW}{\bm{W}}
+\newcommand{\bmX}{\bm{X}}
+\newcommand{\bmY}{\bm{Y}}
+\newcommand{\bmZ}{\bm{Z}}
+
+% mathcal
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calG}{\mathcal{G}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calI}{\mathcal{I}}
+\newcommand{\calJ}{\mathcal{J}}
+\newcommand{\calK}{\mathcal{K}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calQ}{\mathcal{Q}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calU}{\mathcal{U}}
+\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\calX}{\mathcal{X}}
+\newcommand{\calY}{\mathcal{Y}}
+\newcommand{\calZ}{\mathcal{Z}}
+
+% mathfrak
+\newcommand{\fraka}{\mathfrak{a}}
+\newcommand{\frakb}{\mathfrak{b}}
+\newcommand{\frakc}{\mathfrak{c}}
+\newcommand{\frakd}{\mathfrak{d}}
+\newcommand{\frake}{\mathfrak{e}}
+\newcommand{\frakf}{\mathfrak{f}}
+\newcommand{\frakg}{\mathfrak{g}}
+\newcommand{\frakh}{\mathfrak{h}}
+\newcommand{\fraki}{\mathfrak{i}}
+\newcommand{\frakj}{\mathfrak{j}}
+\newcommand{\frakk}{\mathfrak{k}}
+\newcommand{\frakl}{\mathfrak{l}}
+\newcommand{\frakm}{\mathfrak{m}}
+\newcommand{\frakn}{\mathfrak{n}}
+\newcommand{\frako}{\mathfrak{o}}
+\newcommand{\frakp}{\mathfrak{p}}
+\newcommand{\frakq}{\mathfrak{q}}
+\newcommand{\frakr}{\mathfrak{r}}
+\newcommand{\fraks}{\mathfrak{s}}
+\newcommand{\frakt}{\mathfrak{t}}
+\newcommand{\fraku}{\mathfrak{u}}
+\newcommand{\frakv}{\mathfrak{v}}
+\newcommand{\frakw}{\mathfrak{w}}
+\newcommand{\frakx}{\mathfrak{x}}
+\newcommand{\fraky}{\mathfrak{y}}
+\newcommand{\frakz}{\mathfrak{z}}
+\newcommand{\frakA}{\mathfrak{A}}
+\newcommand{\frakB}{\mathfrak{B}}
+\newcommand{\frakC}{\mathfrak{C}}
+\newcommand{\frakD}{\mathfrak{D}}
+\newcommand{\frakE}{\mathfrak{E}}
+\newcommand{\frakF}{\mathfrak{F}}
+\newcommand{\frakG}{\mathfrak{G}}
+\newcommand{\frakH}{\mathfrak{H}}
+\newcommand{\frakI}{\mathfrak{I}}
+\newcommand{\frakJ}{\mathfrak{J}}
+\newcommand{\frakK}{\mathfrak{K}}
+\newcommand{\frakL}{\mathfrak{L}}
+\newcommand{\frakM}{\mathfrak{M}}
+\newcommand{\frakN}{\mathfrak{N}}
+\newcommand{\frakO}{\mathfrak{O}}
+\newcommand{\frakP}{\mathfrak{P}}
+\newcommand{\frakQ}{\mathfrak{Q}}
+\newcommand{\frakR}{\mathfrak{R}}
+\newcommand{\frakS}{\mathfrak{S}}
+\newcommand{\frakT}{\mathfrak{T}}
+\newcommand{\frakU}{\mathfrak{U}}
+\newcommand{\frakV}{\mathfrak{V}}
+\newcommand{\frakW}{\mathfrak{W}}
+\newcommand{\frakX}{\mathfrak{X}}
+\newcommand{\frakY}{\mathfrak{Y}}
+\newcommand{\frakZ}{\mathfrak{Z}}
+
+% mathrm
+\newcommand{\rma}{\mathrm{a}}
+\newcommand{\rmb}{\mathrm{b}}
+\newcommand{\rmc}{\mathrm{c}}
+\newcommand{\rmd}{\mathrm{d}}
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\rmf}{\mathrm{f}}
+\newcommand{\rmg}{\mathrm{g}}
+\newcommand{\rmh}{\mathrm{h}}
+\newcommand{\rmi}{\mathrm{i}}
+\newcommand{\rmj}{\mathrm{j}}
+\newcommand{\rmk}{\mathrm{k}}
+\newcommand{\rml}{\mathrm{l}}
+\newcommand{\rmm}{\mathrm{m}}
+\newcommand{\rmn}{\mathrm{n}}
+\newcommand{\rmo}{\mathrm{o}}
+\newcommand{\rmp}{\mathrm{p}}
+\newcommand{\rmq}{\mathrm{q}}
+\newcommand{\rmr}{\mathrm{r}}
+\newcommand{\rms}{\mathrm{s}}
+\newcommand{\rmt}{\mathrm{t}}
+\newcommand{\rmu}{\mathrm{u}}
+\newcommand{\rmv}{\mathrm{v}}
+\newcommand{\rmw}{\mathrm{w}}
+\newcommand{\rmx}{\mathrm{x}}
+\newcommand{\rmy}{\mathrm{y}}
+\newcommand{\rmz}{\mathrm{z}}
+\newcommand{\rmA}{\mathrm{A}}
+\newcommand{\rmB}{\mathrm{B}}
+\newcommand{\rmC}{\mathrm{C}}
+\newcommand{\rmD}{\mathrm{D}}
+\newcommand{\rmE}{\mathrm{E}}
+\newcommand{\rmF}{\mathrm{F}}
+\newcommand{\rmG}{\mathrm{G}}
+\newcommand{\rmH}{\mathrm{H}}
+\newcommand{\rmI}{\mathrm{I}}
+\newcommand{\rmJ}{\mathrm{J}}
+\newcommand{\rmK}{\mathrm{K}}
+\newcommand{\rmL}{\mathrm{L}}
+\newcommand{\rmM}{\mathrm{M}}
+\newcommand{\rmN}{\mathrm{N}}
+\newcommand{\rmO}{\mathrm{O}}
+\newcommand{\rmP}{\mathrm{P}}
+\newcommand{\rmQ}{\mathrm{Q}}
+\newcommand{\rmR}{\mathrm{R}}
+\newcommand{\rmS}{\mathrm{S}}
+\newcommand{\rmT}{\mathrm{T}}
+\newcommand{\rmU}{\mathrm{U}}
+\newcommand{\rmV}{\mathrm{V}}
+\newcommand{\rmW}{\mathrm{W}}
+\newcommand{\rmX}{\mathrm{X}}
+\newcommand{\rmY}{\mathrm{Y}}
+\newcommand{\rmZ}{\mathrm{Z}}

@@ -1,0 +1,295 @@
+\documentclass[a4paper, 12pt, UTF8]{ctexart}
+\usepackage{matnoble-doc-cn}
+\begin{document}
+\title{\bf \LaTeX 中文文档模板}
+\author{\bf
+  \href{https://www.hustmatnoble.tk/2019/11/contact-me.html}{张\ 振}}
+\date{}
+
+\maketitle
+\tableofcontents
+\footnote{\noindent \createtext{2019 年 12 月 5 日} \newline
+  \updatetext{\today}}.
+
+\clearpage
+\listoflistings
+
+\clearpage
+
+\section{通常环境}
+
+\subsection{列表}
+
+\subsubsection{无序列表}
+\begin{itemize}
+    \item Sth
+    \item Sth
+    \item $\cdots$
+\end{itemize}
+\subsubsection{有序列表}
+\begin{itemize}
+    \item[(1)] Sth
+    \item[(2)] Sth
+    \item[(3)] $\cdots$
+\end{itemize}
+\noindent {\bf 使用 \autoref{mybox} 得到更漂亮列表环境 }
+\begin{mybox}{无序列表}
+    \begin{itemize}[leftmargin = 10pt]
+        \item Sth
+        \item Sth
+        \item $\cdots$
+    \end{itemize}
+\end{mybox}
+
+\begin{listing}[ht]
+    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
+        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
+        fontsize=\footnotesize, mathescape, autogobble ]{tex}
+        \begin{mybox}{12}
+            \begin{itemize}[leftmargin = 10pt]
+                \item Sth
+                \item Sth
+                \item $\cdots$
+            \end{itemize}
+        \end{mybox}
+    \end{minted}
+    \caption{\em mybox}
+    \label{mybox}
+\end{listing}
+
+\clearpage
+\subsection{表格}
+\begin{table}[ht]
+    \centering
+        \caption{\em 这是表格}
+        \vskip 0.1in
+        \label{table}
+        \begin{tabular}{c|cccc}
+          \hline
+          \hline
+          \rule{0pt}{3ex}
+          序号 & 姓名 & 年龄 & 学号 & 性别 
+                                     \rule[-1.2ex]{0pt}{0pt} \\\hline
+          001 & *  &  *  & *  & * \\ 
+          002 & *  &  *  & *  & * \\
+          003 & *  &  *  & *  & * \\      
+          004 & *  &  *  & *  & * \\
+          \hline
+          \hline 
+        \end{tabular}
+\end{table}
+
+\begin{listing}[ht]
+    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
+        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
+        fontsize=\footnotesize, mathescape, autogobble ]{tex}
+        \begin{table}[ht]
+            \centering
+                \caption{\em 这是表格}
+                \vskip 0.1in
+                \label{table}
+                \begin{tabular}{c|cccc}
+                  \hline
+                  \hline
+                  \rule{0pt}{3ex}
+                  序号 & 姓名 & 年龄 & 学号 & 性别  
+                                             \rule[-1.2ex]{0pt}{0pt} \\\hline
+                  001 & *  &  *  & *  & * \\ 
+                  002 & *  &  *  & *  & * \\
+                  003 & *  &  *  & *  & * \\      
+                  004 & *  &  *  & *  & * \\
+                  \hline
+                  \hline 
+                \end{tabular}
+        \end{table}
+    \end{minted}
+    \caption{\em 表格}
+    \label{table}
+\end{listing}
+
+\clearpage
+\subsection{图}
+
+\subsubsection{单张图}
+\begin{figure}[H]
+    \centering \includegraphics[width=0.15\textwidth]{google.png}
+    \caption{\em 单张图}
+    \label{fig:mesh}
+\end{figure}
+
+\subsubsection{两张图并列}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.48\textwidth}
+        \centering
+        % include first image
+        \includegraphics[width=.3\linewidth]{google.png}
+        \caption{\em 子图 1}
+        \label{fig:v21}
+    \end{subfigure}
+    \begin{subfigure}{.48\textwidth}
+        \centering
+        % include second image
+        \includegraphics[width=.3\linewidth]{google.png}
+        \caption{\em 子图 2}
+        \label{fig:v22}
+    \end{subfigure}
+    \caption{\em 并列两张图}
+    \label{fig:v2}
+\end{figure}
+
+\begin{listing}[ht]
+    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
+        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
+        fontsize=\footnotesize, mathescape, autogobble ]{tex}
+        \begin{figure}[H]
+            \centering
+            \begin{subfigure}{.48\textwidth}
+                \centering \includegraphics[width=.5\linewidth]{google.png}
+                \caption{\em 子图 1}
+                \label{fig:v21}
+            \end{subfigure}
+            \begin{subfigure}{.48\textwidth}
+                \centering \includegraphics[width=.5\linewidth]{google.png}
+                \caption{\em 子图 2}
+                \label{fig:v22}
+            \end{subfigure}
+            \caption{\em 并列两张图}
+            \label{fig:v2}
+        \end{figure}
+    \end{minted}
+    \caption{\em 并列图}
+    \label{subfigure}
+\end{listing}
+
+\clearpage
+
+\section{定理类环境}
+\begin{defn}{}{}
+    
+\end{defn}
+
+\begin{lem}{}{}
+    
+\end{lem}
+
+\begin{thm}{}{}
+    \begin{case}
+        
+    \end{case}
+    \begin{case}
+        
+    \end{case}
+\end{thm}
+
+\begin{rem}
+    
+\end{rem}
+
+\begin{cor}{}{}
+    
+\end{cor}
+
+\begin{exa}
+    
+\end{exa}
+
+\begin{proof}
+    
+\end{proof}
+
+\clearpage
+\section{数学公式}
+
+为证 $a = b$, 需要证明
+
+{\bf 无标号}
+\[
+    a < b + \epsilon, \and b < a + \epsilon.
+\]
+
+{\bf 有标号}
+\begin{equation}
+    \label{eq:1}
+    a < b + \epsilon, \and b < a + \epsilon.
+\end{equation}
+
+\vskip2em
+
+PNP/Stokes 方程组
+\begin{empheq}[left=\empheqlbrace]{align}
+    & \partial_{t} - \nabla\cdot[D_{i}(\nabla C_{i} + q_{i} \nabla
+    \Phi C_{i}) - \bmu C_{i}] = F_{i},
+    \\[3pt]
+    & -\nabla \cdot (\epsilon \nabla \Phi) = (C_{1} - C_{2}) + F_{3},
+    \\[3pt]
+    & \partial_{t}\bmu - \Delta \bmu + \nabla p = -(C_{1} -
+    C_{2})\nabla \Phi + F_{4},
+    \\[3pt]
+    & \nabla \cdot \bmu = 0.
+\end{empheq}
+
+矩阵
+\[
+    \begin{bmatrix}
+        2 & -1 & 0\\
+        -1& 2  &-1\\
+        0 & -1 & 2
+    \end{bmatrix}
+\]
+
+\clearpage
+\begin{thebibliography}{99}
+    \bibitem{1} 
+    \bibitem{2}
+    \bibitem{3}
+\end{thebibliography}
+
+\clearpage
+
+\begin{appendices}
+    \section{代码}
+\begin{listing}[ht]
+    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
+        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
+        fontsize=\footnotesize, linenos, mathescape, autogobble
+        ]{python}
+        import matplotlib.pyplot as plt import numpy as np
+        
+        plt.figure(num = 1, figsize=(8, 6)) n = np.linspace(1,100,100)
+        plt.plot(n, 1/n, 'bx') plt.xlabel(r'$ n $')
+        plt.ylabel(r'$ \frac{1}{n} $')
+        
+        plt.figure(num = 2, figsize=(8, 6)) n = np.linspace(1,100,100)
+        plt.plot(n, np.sin(n)/n, 'bx') plt.xlabel(r'$ n $')
+        plt.ylabel(r'$ \frac{\sin(n)}{n} $')
+        
+        plt.show()
+    \end{minted}
+    \caption{\em Python}
+\end{listing}
+
+\begin{listing}[ht]
+    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
+        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
+        fontsize=\footnotesize, linenos, mathescape, autogobble, breaklines
+        ]{matlab}
+        figure()
+        plot(XX,YY,'k-'),hold on plot(XX',YY','k-'), hold on
+        B= plot(boundary(3,:), boundary(4,:), 'b.', 'markersize', 25);
+        hold on
+        I = plot(index(:,1), index(:,2), 'r.', 'markersize',25);
+        hold off
+        axis equal
+        set(gca,'xtick',[],'ytick',[])
+        xlim(X)
+        ylim(Y)
+        set(gca,'looseInset',[0 0.01 0 0.01])
+        h = legend([B, I], 'boundary nodes', 'inside nodes', 'Location','bestoutside');
+        set(h, 'Fontsize', 10)
+    \end{minted}
+    \caption{\em Matlab}
+\end{listing}
+\end{appendices}
+
+\end{document}

@@ -1,0 +1,13 @@
+*.log
+
+*.aux
+
+*.out
+
+*.toc
+
+*.lol
+
+_minted-Document-EN/
+
+_minted-Document-CN/
