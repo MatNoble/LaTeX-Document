@@ -26,10 +26,10 @@ Adobe Fangsong
 <img src="https://raw.githubusercontent.com/MatNoble/Picture/master/wechat.gif" width="300">
 
 ## 授权情况
-本模板代码按(LPPL v1.3c 协议)[https://github.com/MatNoble/LaTeX-Document/blob/master/LICENSE]授权
+本模板代码按[LPPL v1.3c 协议](https://github.com/MatNoble/LaTeX-Document/blob/master/LICENSE)授权
 
 ## 联系方式
-Mail: (hustmatnoble@gmail.com)[mailto:hustmatnoble@gmail.com]
+Mail: [hustmatnoble@gmail.com](mailto:hustmatnoble@gmail.com)
 
 ## 请我喝杯咖啡, 就更好了
 
