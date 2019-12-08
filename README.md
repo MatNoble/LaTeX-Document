@@ -8,7 +8,7 @@
 
 ### 中文预览
 
-<img src="https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-CN_Page_1.png" width="500">
+<img src="https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-CN_Page_1.jpg" width="500">
 
 ## 说明
 中文版需要下载安装字体[在这里](https://github.com/MatNoble/Fonts)
