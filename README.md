@@ -4,7 +4,7 @@
 
 为文章增加红, 蓝, 黄, 绿四色, 使文章不再单调. 定理部分借鉴[这里](https://github.com/kalxd/morelull)
 
-<img src="https://imgkr.cn-bj.ufileos.com/c4bef68f-6157-4981-b1d7-629e991ee838.png" width="200">
+<img src="https://imgkr.cn-bj.ufileos.com/c4bef68f-6157-4981-b1d7-629e991ee838.png" width="400">
 
 模板源代码有适当注释, 简单易懂, 易上手, 易自定义.
 
