@@ -8,6 +8,8 @@
 
 模板源代码有适当注释, 简单易懂, 易上手, 易自定义.
 
+有任何问题, 欢迎提交 `Issues`!
+
 ## 预览
 
 ### 英文预览
@@ -39,6 +41,24 @@
 Adobe kaiti
 
 Adobe Fangsong
+
+### 代码环境
+[Minted](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted) 是 Latex 上非常好用的代码高亮工具, 可以借助 Python 包 Pygement 根据不同的语法高亮.
+需要安装 python, 然后使用工具安装 pygments. 这里假设你已经安装了 pip 和相关 Python.
+
+1. `pip install Pygments`;
+2. 使用 xelatex 编译的时候需要加上参数 `–shell-escape`.
+
+效果如下:
+<img src="https://imgkr.cn-bj.ufileos.com/653a65d0-2cce-4909-8498-aa2301f9843f.png" width="300">
+
+若不使用代码环境, 在对应的 `.sty` 文件中把对应代码注释掉即可.
+
+```
+% 代码高亮
+% \RequirePackage{minted}
+% \usemintedstyle{emacs}
+```
 
 ## 关注我吧
 
