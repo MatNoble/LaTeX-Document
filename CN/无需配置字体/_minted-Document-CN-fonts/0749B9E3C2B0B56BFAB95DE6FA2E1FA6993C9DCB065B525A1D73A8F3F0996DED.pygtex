@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}mybox\PYG{n+nb}{\PYGZcb{}\PYGZob{}}12\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}[leftmargin = 10pt]
+        \PYG{k}{\PYGZbs{}item} Sth
+        \PYG{k}{\PYGZbs{}item} Sth
+        \PYG{k}{\PYGZbs{}item} \PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}cdots}\PYG{l+s}{\PYGZdl{}}
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}mybox\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

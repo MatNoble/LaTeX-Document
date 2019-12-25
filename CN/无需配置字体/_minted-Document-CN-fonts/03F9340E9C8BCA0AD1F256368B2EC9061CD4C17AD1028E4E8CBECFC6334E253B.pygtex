@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{figure}\PYG{p}{()}
+\PYG{n}{plot}\PYG{p}{(}\PYG{n}{XX}\PYG{p}{,}\PYG{n}{YY}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}k\PYGZhy{}\PYGZsq{}}\PYG{p}{),}\PYG{n}{hold} \PYG{n}{on} \PYG{n}{plot}\PYG{p}{(}\PYG{n}{XX}\PYG{o}{\PYGZsq{}}\PYG{p}{,}\PYG{n}{YY}\PYG{o}{\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}k\PYGZhy{}\PYGZsq{}}\PYG{p}{),} \PYG{n}{hold} \PYG{n}{on}
+\PYG{n}{B}\PYG{p}{=} \PYG{n}{plot}\PYG{p}{(}\PYG{n}{boundary}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,:),} \PYG{n}{boundary}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,:),} \PYG{l+s}{\PYGZsq{}b.\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}markersize\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{);}
+\PYG{n}{hold} \PYG{n}{on}
+\PYG{n}{I} \PYG{p}{=} \PYG{n}{plot}\PYG{p}{(}\PYG{n}{index}\PYG{p}{(:,}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{index}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{),} \PYG{l+s}{\PYGZsq{}r.\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}markersize\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{25}\PYG{p}{);}
+\PYG{n}{hold} \PYG{n}{off}
+\PYG{n}{axis} \PYG{n}{equal}
+\PYG{n}{set}\PYG{p}{(}\PYG{n}{gca}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}xtick\PYGZsq{}}\PYG{p}{,[],}\PYG{l+s}{\PYGZsq{}ytick\PYGZsq{}}\PYG{p}{,[])}
+\PYG{n}{xlim}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}
+\PYG{n}{ylim}\PYG{p}{(}\PYG{n}{Y}\PYG{p}{)}
+\PYG{n}{set}\PYG{p}{(}\PYG{n}{gca}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}looseInset\PYGZsq{}}\PYG{p}{,[}\PYG{l+m+mi}{0} \PYG{l+m+mf}{0.01} \PYG{l+m+mi}{0} \PYG{l+m+mf}{0.01}\PYG{p}{])}
+\PYG{n}{h} \PYG{p}{=} \PYG{n}{legend}\PYG{p}{([}\PYG{n}{B}\PYG{p}{,} \PYG{n}{I}\PYG{p}{],} \PYG{l+s}{\PYGZsq{}boundary nodes\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}inside nodes\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}Location\PYGZsq{}}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}bestoutside\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{set}\PYG{p}{(}\PYG{n}{h}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}Fontsize\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
+\end{Verbatim}

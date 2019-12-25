@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}[H]
+    \PYG{k}{\PYGZbs{}centering}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}\PYGZob{}}.48\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}centering} \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=.5\PYGZbs{}linewidth]}\PYG{n+nb}{\PYGZob{}}google.png\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}em} 子图 1\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}fig:v21\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}\PYGZob{}}.48\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}centering} \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=.5\PYGZbs{}linewidth]}\PYG{n+nb}{\PYGZob{}}google.png\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}em} 子图 2\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}fig:v22\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}subfigure\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}em} 并列两张图\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}fig:v2\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

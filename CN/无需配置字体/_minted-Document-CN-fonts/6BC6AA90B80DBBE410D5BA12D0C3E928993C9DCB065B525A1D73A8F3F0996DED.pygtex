@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}table\PYG{n+nb}{\PYGZcb{}}[ht]
+    \PYG{k}{\PYGZbs{}centering}
+        \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}em} 这是表格\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}vskip} 0.1in
+        \PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}table\PYG{n+nb}{\PYGZcb{}}
+        \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}\PYGZob{}}c|cccc\PYG{n+nb}{\PYGZcb{}}
+          \PYG{k}{\PYGZbs{}hline}
+          \PYG{k}{\PYGZbs{}hline}
+          \PYG{k}{\PYGZbs{}rule}\PYG{n+nb}{\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}3ex\PYG{n+nb}{\PYGZcb{}}
+          序号 \PYG{n+nb}{\PYGZam{}} 姓名 \PYG{n+nb}{\PYGZam{}} 年龄 \PYG{n+nb}{\PYGZam{}} 学号 \PYG{n+nb}{\PYGZam{}} 性别
+                                     \PYG{k}{\PYGZbs{}rule}\PYG{n+na}{[\PYGZhy{}1.2ex]}\PYG{n+nb}{\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0pt\PYG{n+nb}{\PYGZcb{}} \PYG{k}{\PYGZbs{}\PYGZbs{}\PYGZbs{}hline}
+          001 \PYG{n+nb}{\PYGZam{}} *  \PYG{n+nb}{\PYGZam{}}  *  \PYG{n+nb}{\PYGZam{}} *  \PYG{n+nb}{\PYGZam{}} * \PYG{k}{\PYGZbs{}\PYGZbs{}}
+          002 \PYG{n+nb}{\PYGZam{}} *  \PYG{n+nb}{\PYGZam{}}  *  \PYG{n+nb}{\PYGZam{}} *  \PYG{n+nb}{\PYGZam{}} * \PYG{k}{\PYGZbs{}\PYGZbs{}}
+          003 \PYG{n+nb}{\PYGZam{}} *  \PYG{n+nb}{\PYGZam{}}  *  \PYG{n+nb}{\PYGZam{}} *  \PYG{n+nb}{\PYGZam{}} * \PYG{k}{\PYGZbs{}\PYGZbs{}}
+          004 \PYG{n+nb}{\PYGZam{}} *  \PYG{n+nb}{\PYGZam{}}  *  \PYG{n+nb}{\PYGZam{}} *  \PYG{n+nb}{\PYGZam{}} * \PYG{k}{\PYGZbs{}\PYGZbs{}}
+          \PYG{k}{\PYGZbs{}hline}
+          \PYG{k}{\PYGZbs{}hline}
+        \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}table\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

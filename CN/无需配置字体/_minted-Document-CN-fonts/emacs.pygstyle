@@ -1,0 +1,101 @@
+
+\makeatletter
+\def\PYGemacs@reset{\let\PYGemacs@it=\relax \let\PYGemacs@bf=\relax%
+    \let\PYGemacs@ul=\relax \let\PYGemacs@tc=\relax%
+    \let\PYGemacs@bc=\relax \let\PYGemacs@ff=\relax}
+\def\PYGemacs@tok#1{\csname PYGemacs@tok@#1\endcsname}
+\def\PYGemacs@toks#1+{\ifx\relax#1\empty\else%
+    \PYGemacs@tok{#1}\expandafter\PYGemacs@toks\fi}
+\def\PYGemacs@do#1{\PYGemacs@bc{\PYGemacs@tc{\PYGemacs@ul{%
+    \PYGemacs@it{\PYGemacs@bf{\PYGemacs@ff{#1}}}}}}}
+\def\PYGemacs#1#2{\PYGemacs@reset\PYGemacs@toks#1+\relax+\PYGemacs@do{#2}}
+
+\expandafter\def\csname PYGemacs@tok@w\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PYGemacs@tok@c\endcsname{\let\PYGemacs@it=\textit\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@cp\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@cs\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@k\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@kp\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@kt\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.73,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@o\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGemacs@tok@ow\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@nb\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@nf\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@nc\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@nn\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@ne\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PYGemacs@tok@nv\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.72,0.53,0.04}{##1}}}
+\expandafter\def\csname PYGemacs@tok@no\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@nl\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@ni\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PYGemacs@tok@na\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@nt\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@nd\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@s\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@sd\endcsname{\let\PYGemacs@it=\textit\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@si\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PYGemacs@tok@se\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PYGemacs@tok@sr\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PYGemacs@tok@ss\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.72,0.53,0.04}{##1}}}
+\expandafter\def\csname PYGemacs@tok@sx\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@m\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGemacs@tok@gh\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PYGemacs@tok@gu\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PYGemacs@tok@gd\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@gi\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@gr\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@ge\endcsname{\let\PYGemacs@it=\textit}
+\expandafter\def\csname PYGemacs@tok@gs\endcsname{\let\PYGemacs@bf=\textbf}
+\expandafter\def\csname PYGemacs@tok@gp\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PYGemacs@tok@go\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PYGemacs@tok@gt\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PYGemacs@tok@err\endcsname{\def\PYGemacs@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PYGemacs@tok@kc\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@kd\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@kn\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@kr\endcsname{\let\PYGemacs@bf=\textbf\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@bp\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@fm\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@vc\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.72,0.53,0.04}{##1}}}
+\expandafter\def\csname PYGemacs@tok@vg\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.72,0.53,0.04}{##1}}}
+\expandafter\def\csname PYGemacs@tok@vi\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.72,0.53,0.04}{##1}}}
+\expandafter\def\csname PYGemacs@tok@vm\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.72,0.53,0.04}{##1}}}
+\expandafter\def\csname PYGemacs@tok@sa\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@sb\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@sc\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@dl\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@s2\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@sh\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@s1\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.73,0.27,0.27}{##1}}}
+\expandafter\def\csname PYGemacs@tok@mb\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGemacs@tok@mf\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGemacs@tok@mh\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGemacs@tok@mi\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGemacs@tok@il\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGemacs@tok@mo\endcsname{\def\PYGemacs@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PYGemacs@tok@ch\endcsname{\let\PYGemacs@it=\textit\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@cm\endcsname{\let\PYGemacs@it=\textit\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@cpf\endcsname{\let\PYGemacs@it=\textit\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+\expandafter\def\csname PYGemacs@tok@c1\endcsname{\let\PYGemacs@it=\textit\def\PYGemacs@tc##1{\textcolor[rgb]{0.00,0.53,0.00}{##1}}}
+
+\def\PYGemacsZbs{\char`\\}
+\def\PYGemacsZus{\char`\_}
+\def\PYGemacsZob{\char`\{}
+\def\PYGemacsZcb{\char`\}}
+\def\PYGemacsZca{\char`\^}
+\def\PYGemacsZam{\char`\&}
+\def\PYGemacsZlt{\char`\<}
+\def\PYGemacsZgt{\char`\>}
+\def\PYGemacsZsh{\char`\#}
+\def\PYGemacsZpc{\char`\%}
+\def\PYGemacsZdl{\char`\$}
+\def\PYGemacsZhy{\char`\-}
+\def\PYGemacsZsq{\char`\'}
+\def\PYGemacsZdq{\char`\"}
+\def\PYGemacsZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYGemacsZat{@}
+\def\PYGemacsZlb{[}
+\def\PYGemacsZrb{]}
+\makeatother
+

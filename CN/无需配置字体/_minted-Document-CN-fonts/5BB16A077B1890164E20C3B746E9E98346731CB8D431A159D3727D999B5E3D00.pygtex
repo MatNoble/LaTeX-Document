@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k+kn}{as} \PYG{n+nn}{plt} \PYG{n+nn}{import} \PYG{n+nn}{numpy} \PYG{k+kn}{as} \PYG{n+nn}{np}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{num} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{))} \PYG{n}{n} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{o}{/}\PYG{n}{n}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}bx\PYGZsq{}}\PYG{p}{)} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{} n \PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{} \PYGZbs{}frac\PYGZob{}1\PYGZcb{}\PYGZob{}n\PYGZcb{} \PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{(}\PYG{n}{num} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{))} \PYG{n}{n} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{100}\PYG{p}{,}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}\PYG{o}{/}\PYG{n}{n}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}bx\PYGZsq{}}\PYG{p}{)} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{} n \PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{} \PYGZbs{}frac\PYGZob{}\PYGZbs{}sin(n)\PYGZcb{}\PYGZob{}n\PYGZcb{} \PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+\end{Verbatim}
