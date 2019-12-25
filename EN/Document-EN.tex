@@ -24,6 +24,10 @@
 
 \clearpage
 
+\section{Random Text}
+\lipsum[2-4]
+\clearpage
+
 \section{Common Eenvironment}
 
 \subsection{List}
@@ -267,47 +271,42 @@ Matrix
 
 \begin{appendices}
     \section{Codes}
-\begin{listing}[ht]
-    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
-        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
-        fontsize=\footnotesize, linenos, mathescape, autogobble
-        ]{python}
-        import matplotlib.pyplot as plt import numpy as np
+    \begin{listing}[ht]
+        \begin{minted}[ frame=single, framesep=2mm,
+            baselinestretch=1.2, bgcolor=MaterialBlue50,
+            rulecolor=MaterialBlue, fontsize=\footnotesize, linenos,
+            mathescape, autogobble ]{python}
+            import matplotlib.pyplot as plt import numpy as np
         
-        plt.figure(num = 1, figsize=(8, 6)) n = np.linspace(1,100,100)
-        plt.plot(n, 1/n, 'bx') plt.xlabel(r'$ n $')
-        plt.ylabel(r'$ \frac{1}{n} $')
+            plt.figure(num = 1, figsize=(8, 6)) n =
+            np.linspace(1,100,100) plt.plot(n, 1/n, 'bx')
+            plt.xlabel(r'$ n $') plt.ylabel(r'$ \frac{1}{n} $')
         
-        plt.figure(num = 2, figsize=(8, 6)) n = np.linspace(1,100,100)
-        plt.plot(n, np.sin(n)/n, 'bx') plt.xlabel(r'$ n $')
-        plt.ylabel(r'$ \frac{\sin(n)}{n} $')
+            plt.figure(num = 2, figsize=(8, 6)) n =
+            np.linspace(1,100,100) plt.plot(n, np.sin(n)/n, 'bx')
+            plt.xlabel(r'$ n $') plt.ylabel(r'$ \frac{\sin(n)}{n} $')
         
-        plt.show()
-    \end{minted}
-    \caption{\em Python}
-\end{listing}
+            plt.show()
+        \end{minted}
+        \caption{\em Python}
+    \end{listing}
 
-\begin{listing}[ht]
-    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
-        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
-        fontsize=\footnotesize, linenos, mathescape, autogobble
-        ]{matlab}
-        figure()
-        plot(XX,YY,'k-'),hold on plot(XX',YY','k-'), hold on
-        B= plot(boundary(3,:), boundary(4,:), 'b.', 'markersize', 25);
-        hold on
-        I = plot(index(:,1), index(:,2), 'r.', 'markersize',25);
-        hold off
-        axis equal
-        set(gca,'xtick',[],'ytick',[])
-        xlim(X)
-        ylim(Y)
-        set(gca,'looseInset',[0 0.01 0 0.01])
-        h = legend([B, I], 'boundary nodes', 'inside nodes', 'Location','bestoutside');
-        set(h, 'Fontsize', 10)
-    \end{minted}
-    \caption{\em Matlab}
-\end{listing}
+    \begin{listing}[ht]
+        \begin{minted}[ frame=single, framesep=2mm,
+            baselinestretch=1.2, bgcolor=MaterialBlue50,
+            rulecolor=MaterialBlue, fontsize=\footnotesize, linenos,
+            mathescape, autogobble ]{matlab}
+            figure() plot(XX,YY,'k-'),hold on plot(XX',YY','k-'), hold
+            on B= plot(boundary(3,:), boundary(4,:), 'b.',
+            'markersize', 25); hold on I = plot(index(:,1),
+            index(:,2), 'r.', 'markersize',25); hold off axis equal
+            set(gca,'xtick',[],'ytick',[]) xlim(X) ylim(Y)
+            set(gca,'looseInset',[0 0.01 0 0.01]) h = legend([B, I],
+            'boundary nodes', 'inside nodes',
+            'Location','bestoutside'); set(h, 'Fontsize', 10)
+        \end{minted}
+        \caption{\em Matlab}
+    \end{listing}
 \end{appendices}
 
 \end{document}
