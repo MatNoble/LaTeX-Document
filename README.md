@@ -17,11 +17,11 @@
 
 ### 英文预览
 
-<img src="https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-EN_Page_1.png" title="英文首页预览" width="500">
+<img src="https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-EN.svg" title="英文首页预览" alt="数系家园LaTeX英文文档" width="500">
 
 ### 中文预览
 
-<img src="https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-CN_Page_1.jpg" title="中文首页预览" width="500">
+<img src="https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-CN.svg" title="中文首页预览" alt="数系家园LaTeX中文文档" width="500">
 
 ## 使用说明
 
@@ -66,7 +66,7 @@ Adobe Fangsong
 
 ## 关注我吧
 
-<img src="https://raw.githubusercontent.com/MatNoble/Picture/master/wechat.gif" title="公众号: 数系家园" width="300">
+<img src="https://raw.githubusercontent.com/MatNoble/Picture/master/wechat.gif" title="公众号: 数系家园"　alt="公众号: 数系家园" width="300">
 
 ## 授权情况
 本模板代码按[LPPL v1.3c 协议](https://github.com/MatNoble/LaTeX-Document/blob/master/LICENSE)授权

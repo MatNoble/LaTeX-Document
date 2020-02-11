@@ -1,8 +1,7 @@
 \documentclass[a4paper, 12pt, UTF8]{ctexart}
 \usepackage{matnoble-doc-cn}
 \begin{document}
-\title{\bf \LaTeX 中文文档模板}
-\author{\bf
+\title{\bf \LaTeX 中文文档模板} \author{\bf
   \href{https://www.hustmatnoble.tk/2019/11/contact-me.html}{数系家园}}
 \date{}
 
@@ -32,12 +31,24 @@
     \item $\cdots$
 \end{itemize}
 \subsubsection{有序列表}
+\begin{enumerate}
+    \item sth
+    \item sth
+    \item $\cdots$
+\end{enumerate}
+或者
 \begin{itemize}
     \item[(1)] Sth
     \item[(2)] Sth
     \item[(3)] $\cdots$
 \end{itemize}
+
+\bigskip
+
 \noindent {\bf 使用 \autoref{mybox} 得到更漂亮列表环境 }
+
+\medskip
+
 \begin{mybox}{无序列表}
     \begin{itemize}[leftmargin = 10pt]
         \item Sth
@@ -50,7 +61,20 @@
     \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
         bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
         fontsize=\footnotesize, mathescape, autogobble ]{tex}
-        \begin{mybox}{12}
+        无序
+        \begin{itemize}
+            \item Sth
+            \item Sth
+            \item $\cdots$
+        \end{itemize}
+        有序
+        \begin{enumerate}
+            \item sth
+            \item sth
+            \item $\cdots$
+        \end{enumerate}
+        带边框
+        \begin{mybox}{列表}
             \begin{itemize}[leftmargin = 10pt]
                 \item Sth
                 \item Sth
@@ -66,22 +90,22 @@
 \subsection{表格}
 \begin{table}[ht]
     \centering
-        \caption{\em 这是表格}
-        \vskip 0.1in
-        \label{table}
-        \begin{tabular}{c|cccc}
-          \hline
-          \hline
-          \rule{0pt}{3ex}
-          序号 & 姓名 & 年龄 & 学号 & 性别 
-                                     \rule[-1.2ex]{0pt}{0pt} \\\hline
-          001 & *  &  *  & *  & * \\ 
-          002 & *  &  *  & *  & * \\
-          003 & *  &  *  & *  & * \\      
-          004 & *  &  *  & *  & * \\
-          \hline
-          \hline 
-        \end{tabular}
+    \caption{\em 这是表格}
+    \vskip 0.1in
+    \label{table}
+    \begin{tabular}{c|cccc}
+      \hline
+      \hline
+      \rule{0pt}{3ex}
+      序号 & 姓名 & 年龄 & 学号 & 性别 
+                                  \rule[-1.2ex]{0pt}{0pt} \\\hline
+      001 & *  &  *  & *  & * \\ 
+      002 & *  &  *  & *  & * \\
+      003 & *  &  *  & *  & * \\      
+      004 & *  &  *  & *  & * \\
+      \hline
+      \hline 
+    \end{tabular}
 \end{table}
 
 \begin{listing}[ht]
@@ -90,22 +114,22 @@
         fontsize=\footnotesize, mathescape, autogobble ]{tex}
         \begin{table}[ht]
             \centering
-                \caption{\em 这是表格}
-                \vskip 0.1in
-                \label{table}
-                \begin{tabular}{c|cccc}
-                  \hline
-                  \hline
-                  \rule{0pt}{3ex}
-                  序号 & 姓名 & 年龄 & 学号 & 性别  
-                                             \rule[-1.2ex]{0pt}{0pt} \\\hline
-                  001 & *  &  *  & *  & * \\ 
-                  002 & *  &  *  & *  & * \\
-                  003 & *  &  *  & *  & * \\      
-                  004 & *  &  *  & *  & * \\
-                  \hline
-                  \hline 
-                \end{tabular}
+            \caption{\em 这是表格}
+            \vskip 0.1in
+            \label{table}
+            \begin{tabular}{c|cccc}
+              \hline
+              \hline
+              \rule{0pt}{3ex}
+              序号 & 姓名 & 年龄 & 学号 & 性别  
+                                          \rule[-1.2ex]{0pt}{0pt} \\\hline
+              001 & *  &  *  & *  & * \\ 
+              002 & *  &  *  & *  & * \\
+              003 & *  &  *  & *  & * \\      
+              004 & *  &  *  & *  & * \\
+              \hline
+              \hline 
+            \end{tabular}
         \end{table}
     \end{minted}
     \caption{\em 表格}
@@ -150,12 +174,14 @@
         \begin{figure}[H]
             \centering
             \begin{subfigure}{.48\textwidth}
-                \centering \includegraphics[width=.5\linewidth]{google.png}
+                \centering
+                \includegraphics[width=.5\linewidth]{google.png}
                 \caption{\em 子图 1}
                 \label{fig:v21}
             \end{subfigure}
             \begin{subfigure}{.48\textwidth}
-                \centering \includegraphics[width=.5\linewidth]{google.png}
+                \centering
+                \includegraphics[width=.5\linewidth]{google.png}
                 \caption{\em 子图 2}
                 \label{fig:v22}
             \end{subfigure}
@@ -206,6 +232,10 @@
 \clearpage
 \section{数学公式}
 
+\[
+    \int x^{2} \dif x
+\]
+
 为证 $a = b$, 需要证明
 
 {\bf 无标号}
@@ -245,7 +275,7 @@ PNP/Stokes 方程组
 
 \clearpage
 \begin{thebibliography}{99}
-    \bibitem{1} 
+    \bibitem{1}
     \bibitem{2}
     \bibitem{3}
 \end{thebibliography}
@@ -254,47 +284,42 @@ PNP/Stokes 方程组
 
 \begin{appendices}
     \section{代码}
-\begin{listing}[ht]
-    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
-        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
-        fontsize=\footnotesize, linenos, mathescape, autogobble
-        ]{python}
-        import matplotlib.pyplot as plt import numpy as np
+    \begin{listing}[ht]
+        \begin{minted}[ frame=single, framesep=2mm,
+            baselinestretch=1.2, bgcolor=MaterialBlue50,
+            rulecolor=MaterialBlue, fontsize=\footnotesize, linenos,
+            mathescape, autogobble ]{python}
+            import matplotlib.pyplot as plt import numpy as np
         
-        plt.figure(num = 1, figsize=(8, 6)) n = np.linspace(1,100,100)
-        plt.plot(n, 1/n, 'bx') plt.xlabel(r'$ n $')
-        plt.ylabel(r'$ \frac{1}{n} $')
+            plt.figure(num = 1, figsize=(8, 6)) n =
+            np.linspace(1,100,100) plt.plot(n, 1/n, 'bx')
+            plt.xlabel(r'$ n $') plt.ylabel(r'$ \frac{1}{n} $')
         
-        plt.figure(num = 2, figsize=(8, 6)) n = np.linspace(1,100,100)
-        plt.plot(n, np.sin(n)/n, 'bx') plt.xlabel(r'$ n $')
-        plt.ylabel(r'$ \frac{\sin(n)}{n} $')
+            plt.figure(num = 2, figsize=(8, 6)) n =
+            np.linspace(1,100,100) plt.plot(n, np.sin(n)/n, 'bx')
+            plt.xlabel(r'$ n $') plt.ylabel(r'$ \frac{\sin(n)}{n} $')
         
-        plt.show()
-    \end{minted}
-    \caption{\em Python}
-\end{listing}
+            plt.show()
+        \end{minted}
+        \caption{\em Python}
+    \end{listing}
 
-\begin{listing}[ht]
-    \begin{minted}[ frame=single, framesep=2mm, baselinestretch=1.2,
-        bgcolor=MaterialBlue50, rulecolor=MaterialBlue,
-        fontsize=\footnotesize, linenos, mathescape, autogobble, breaklines
-        ]{matlab}
-        figure()
-        plot(XX,YY,'k-'),hold on plot(XX',YY','k-'), hold on
-        B= plot(boundary(3,:), boundary(4,:), 'b.', 'markersize', 25);
-        hold on
-        I = plot(index(:,1), index(:,2), 'r.', 'markersize',25);
-        hold off
-        axis equal
-        set(gca,'xtick',[],'ytick',[])
-        xlim(X)
-        ylim(Y)
-        set(gca,'looseInset',[0 0.01 0 0.01])
-        h = legend([B, I], 'boundary nodes', 'inside nodes', 'Location','bestoutside');
-        set(h, 'Fontsize', 10)
-    \end{minted}
-    \caption{\em Matlab}
-\end{listing}
+    \begin{listing}[ht]
+        \begin{minted}[ frame=single, framesep=2mm,
+            baselinestretch=1.2, bgcolor=MaterialBlue50,
+            rulecolor=MaterialBlue, fontsize=\footnotesize, linenos,
+            mathescape, autogobble, breaklines ]{matlab}
+            figure() plot(XX,YY,'k-'),hold on plot(XX',YY','k-'), hold
+            on B= plot(boundary(3,:), boundary(4,:), 'b.',
+            'markersize', 25); hold on I = plot(index(:,1),
+            index(:,2), 'r.', 'markersize',25); hold off axis equal
+            set(gca,'xtick',[],'ytick',[]) xlim(X) ylim(Y)
+            set(gca,'looseInset',[0 0.01 0 0.01]) h = legend([B, I],
+            'boundary nodes', 'inside nodes',
+            'Location','bestoutside'); set(h, 'Fontsize', 10)
+        \end{minted}
+        \caption{\em Matlab}
+    \end{listing}
 \end{appendices}
 
 \end{document}
