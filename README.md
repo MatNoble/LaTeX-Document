@@ -19,6 +19,8 @@
 
 <img src="https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-EN.svg" title="英文首页预览" alt="数系家园LaTeX英文文档" width="500">
 
+![](https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-EN.svg)
+
 ### 中文预览
 
 <img src="https://raw.githubusercontent.com/MatNoble/LaTeX-Document/master/Images/Document-CN.svg" title="中文首页预览" alt="数系家园LaTeX中文文档" width="500">
