@@ -1,0 +1,65 @@
+\documentclass[a4paper, 12pt, UTF8]{ctexart}
+\usepackage{matnoble-doc-cn}
+
+\begin{document}
+\title{\bf　Emacs 快速输入 \LaTeX 表格} \author{\bf
+  \href{https://matnoble.me/about}{MatNoble}}
+\date{}
+
+\maketitle
+
+% logo
+\vspace{23em}
+\begin{figure}[ht]
+    \centering{\includegraphics[width=0.25\textwidth]{google.png}}
+\end{figure}
+\footnote{\noindent \createtext{2020 年 2 月 4 日} \newline
+  \updatetext{\today}}.
+
+\clearpage
+
+\section{表格}
+\begin{table}[ht]
+    \centering
+    \caption{这是示例表格}
+    \vskip 0.1in
+    \label{table}
+    \begin{tabular}{c|cccc}
+      \hline
+      \hline
+      \rule{0pt}{3ex}
+      序号 & 姓名 & 年龄 & 学号 & 性别
+                                  \rule[-1.2ex]{0pt}{0pt}
+      \\
+      \hline
+      001 & *  &  *  & *  & * \\ 
+      002 & *  &  *  & *  & * \\
+      003 & *  &  *  & *  & * \\      
+      004 & *  &  *  & *  & * \\
+      \hline
+      \hline 
+    \end{tabular}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \caption{这是一个示例表格}
+    \begin{tabular}{c|cccc}
+      \hline
+      \hline
+       & \Gape[6pt]{1} &2 &3 &4 \\
+      \hline
+        1   &  2.2646e-03  &  1.1997e-01  &  4.4198e-02  & 1.0017e+00 \\
+        2   &  3.1816e-04  &  3.0530e-02  &  1.1504e-02  & 5.0877e-01 \\
+        3   &  5.2683e-05  &  7.6682e-03  &  2.9059e-03  & 2.5539e-01 \\
+        4   &  1.0837e-05  &  1.9193e-03  &  7.2837e-04  & 1.2782e-01 \\
+        5   &  2.5422e-06  &  4.7998e-04  &  1.8221e-04  & 6.3928e-02 \\
+      \hline
+      \hline
+    \end{tabular}
+    \label{tab:data1}
+\end{table}
+
+
+
+\end{document}
