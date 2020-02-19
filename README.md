@@ -64,9 +64,14 @@ Adobe Fangsong
 % \usemintedstyle{emacs}
 ```
 
+### Using Emacs as LaTeX editor
+
+#### Table
+
+
 ## 关注我吧
 
-<img src="https://raw.githubusercontent.com/MatNoble/Picture/master/wechat.gif" title="公众号: 数系家园"　alt="公众号: 数系家园" width="300">
+<img src="https://raw.githubusercontent.com/MatNoble/Picture/master/wechat.gif" title="公众号: 数系家园" alt="公众号: 数系家园" width="300">
 
 ## 授权情况
 本模板代码按[LPPL v1.3c 协议](https://github.com/MatNoble/LaTeX-Document/blob/master/LICENSE)授权
