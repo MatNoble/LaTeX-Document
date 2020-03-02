@@ -17,11 +17,15 @@
 
 ### 英文预览
 
-<img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-EN.svg" title="英文首页预览" alt="数系家园LaTeX英文文档" width="500">
+<img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-EN1.svg" title="英文首页预览" alt="数系家园LaTeX英文文档" width="500">
+
+<img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-EN2.svg" title="自定定理环境" alt="数系家园LaTeX英文文档" width="500">
 
 ### 中文预览
 
-<img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-CN.svg" title="中文首页预览" alt="数系家园LaTeX中文文档" width="500">
+<img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-CN1.svg" title="中文首页预览" alt="数系家园LaTeX中文文档" width="500">
+
+<img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-CN2.svg" title="图片并列" alt="数系家园LaTeX中文文档" width="500">
 
 ## 使用说明
 
@@ -41,9 +45,7 @@
 
 思源黑体
 
-Adobe kaiti
-
-Adobe Fangsong
+Kaiti
 
 ### 代码环境
 [Minted](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted) 是 Latex 上非常好用的代码高亮工具, 可以借助 Python 包 Pygement 根据不同的语法高亮.
@@ -68,6 +70,7 @@ Adobe Fangsong
 
 #### Table
 
+[使用 Emacs 制作 LaTeX 表格](https://matnoble.me/posts/using-emacs-to-make-latex-table/)
 
 ## 关注我吧
 

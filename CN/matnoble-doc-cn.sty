@@ -1,33 +1,45 @@
 %
 % 个人自用文档样式
 %
-\ProvidesPackage{matnoble-doc-cn}[2019/12/05 v1.1]
+\ProvidesPackage{matnoble-doc-cn}[2020/03/02 v1.3]
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
 
 %================================== 设置中文字体 ===========================%
 % 将系统字体名映射为逻辑字体名称, 主要是为了维护的方便
-\newcommand\fontnamehei{SourceHanSansSC-Regular} 
-\newcommand\fontnamesong{SourceHanSerifSC-Regular} 
-\newcommand\fontnamekai{Adobe Kaiti Std}
-\newcommand\fontnamemono{Adobe Fangsong Std}
+\newcommand\fontnamehei{Source Han Sans SC} 
+\newcommand\fontnamesong{Source Han Serif SC} 
+\newcommand\fontnamekai{KaiTi}
+\newcommand\fontnamemono{Source Han Sans SC}
 \setCJKmainfont[BoldFont=\fontnamehei]{\fontnamesong} % 设置 CJK 主字体
 \setCJKsansfont[BoldFont=\fontnamehei]{\fontnamekai}  % 设置 CJK 无衬线的字体
-\setCJKmonofont{\fontnamemono}                           % 设置 CJK 的等宽字体
-\punctstyle{kaiming}
+\setCJKmonofont{\fontnamemono}                        % 设置 CJK 的等宽字体
 %================================== 设置中文字体 ===========================%
-%================================== 设置英文字体 ===========================%
-\setmainfont[Mapping=tex-text]{Times New Roman} % 西文默认衬线字体(serif)
-\setsansfont[Mapping=tex-text]{Arial}  % 西文默认无衬线字体(sans serif)
-\setmonofont{DejaVu Sans Mono}         % 西文默认的等宽字体
-%================================== 设置英文字体 ===========================%
-\setCJKfamilyfont{adhei}{SourceHanSansSC-Regular} % 开源的思源黑体 
+
+% ================================= 设置英文字体 ===========================%
+\setmainfont[Mapping=tex-text]{Times New Roman}       % 西文默认衬线字体(serif)
+\setsansfont[Mapping=tex-text]{Arial}                 % 西文默认无衬线字体(sans serif)
+\setmonofont{Source Code Pro}                         % 西文默认的等宽字体
+% ================================= 设置英文字体 ===========================%
+
+% 开明式 标点
+\punctstyle{kaiming}
+
+% 自定义公式字体
+\setCJKfamilyfont{adhei}{Source Han Sans SC} % 开源的思源黑体 
 \newcommand{\adheiti}{\CJKfamily{adhei}}
-\setCJKfamilyfont{adkai}{Adobe Kaiti Std}  
+\setCJKfamilyfont{adkai}{KaiTi}  
 \newcommand{\adkaiti}{\CJKfamily{adkai}}
 
-% \usepackage{mathptmx} % 打印
-\usepackage{charter} % 屏读
-
 \RequirePackage{amsmath, amsthm, amsfonts, amssymb, bm}
+
+% 自定义公式字体
+\usepackage{newtxtext,newtxmath}
+% \usepackage{mathptmx} % 打印
+% \usepackage{charter}  % 屏读
+% \usepackage{fourier}
+
 \RequirePackage{calrsfs, wasysym, verbatim, graphicx, geometry, empheq}
 \RequirePackage[nottoc]{tocbibind}
 %% 长表格
@@ -40,8 +52,6 @@
 \RequirePackage{bigstrut}
 %% 在跨行表格中输入定界符
 \RequirePackage{bigdelim}
-% 界面微调算法, 更好看
-\RequirePackage{microtype}
 % 首行缩进
 \RequirePackage{indentfirst}
 % 设置浮动体的标题
@@ -77,8 +87,10 @@
 \RequirePackage{minted}
 \usemintedstyle{emacs}
 \renewcommand\listoflistingscaption{源码列表}
+
 % 页面边距
 \geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}
+
 % 行距
 \RequirePackage{setspace}
 \setstretch{1.38}

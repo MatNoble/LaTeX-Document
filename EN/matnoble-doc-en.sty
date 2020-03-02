@@ -2,29 +2,31 @@
 % 个人自用文档样式
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{matnoble-doc-en}[2019/12/02 v1.2 updated by Ross]
+\ProvidesPackage{matnoble-doc-en}[2020/03/02 v1.3 updated by Ross]
 %% Blog
 % https://matnoble.me
-% https://matnoble.github.io
-%% YouTube
-% https://www.youtube.com/c/RossMatNoble?sub_confirmation=1
 %% Gmail
 % hustmatnoble@gmail.com
 %% GitHub
 % https://github.com/MatNoble
 
 \RequirePackage[T1]{fontenc}
-\RequirePackage[utf8]{inputenc}
 \RequirePackage[english]{babel}
 
-% \usepackage{mathptmx} % 打印
-\usepackage{charter} % 屏读
-
 \RequirePackage{amsmath,amsthm,amsfonts,amssymb, bm}
+
+% 公式字体
+\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo,amsbb,eucal]{mtpro2}
+% \usepackage{newtxtext,newtxmath} % New Times Roman
+% \usepackage{mathptmx} % 打印 times
+% \usepackage{charter}  % 屏读
+% \usepackage{fourier}
+
 % 页面设置
 \RequirePackage{geometry}
 \RequirePackage{calrsfs, wasysym, verbatim, empheq}
 \RequirePackage[nottoc]{tocbibind}
+
 % 代码高亮
 \RequirePackage{minted}
 \usemintedstyle{emacs}
@@ -82,8 +84,8 @@
 \renewcommand{\thefootnote}{}
 
 \geometry{tmargin=.85in, bmargin=.85in, lmargin=.75in, rmargin = .75in}
+
 % 行距设置
-% \renewcommand*{\baselinestretch}{1.05}
 \RequirePackage{setspace}
 \setstretch{1.2}
 \setlength{\parskip}{3mm}

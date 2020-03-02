@@ -2,8 +2,9 @@
 % 个人自用文档样式
 %
 % 无需刻意配置字体
-\ProvidesPackage{matnoble-doc-cn-fonts}[2019/12/25 v1.2]
+\ProvidesPackage{matnoble-doc-cn-fonts}[2020/03/02 v1.2]
 
+\usepackage{xeCJK}
 %================================== 设置中文字体 ===========================%
 % 将系统字体名映射为逻辑字体名称, 主要是为了维护的方便
 \newcommand\fontnamehei{SimHei} 
@@ -25,8 +26,11 @@
 \setCJKfamilyfont{adkai}{KaiTi}  
 \newcommand{\adkaiti}{\CJKfamily{adkai}}
 
+% 自定义公式字体
+\usepackage{newtxtext,newtxmath}
 % \usepackage{mathptmx} % 打印
-\usepackage{charter} % 屏读
+% \usepackage{charter}  % 屏读
+% \usepackage{fourier}
 
 \RequirePackage{amsmath, amsthm, amsfonts, amssymb, bm}
 \RequirePackage{calrsfs, wasysym, verbatim, graphicx, geometry, empheq}
@@ -41,8 +45,6 @@
 \RequirePackage{bigstrut}
 %% 在跨行表格中输入定界符
 \RequirePackage{bigdelim}
-% 界面微调算法, 更好看
-\RequirePackage{microtype}
 % 首行缩进
 \RequirePackage{indentfirst}
 % 设置浮动体的标题
