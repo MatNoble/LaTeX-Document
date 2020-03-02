@@ -34,8 +34,11 @@
 ### 公式字体
 以下二选一
 ```
-% \usepackage{mathptmx} % 打印
-\usepackage{charter} % 屏读
+\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo,amsbb,eucal]{mtpro2}
+% \usepackage{newtxtext,newtxmath} % New Times Roman
+% \usepackage{mathptmx} % 打印 times
+% \usepackage{charter}  % 屏读
+% \usepackage{fourier}
 ```
 
 ### 中文字体
