@@ -2,7 +2,7 @@
 % 个人自用文档样式
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{matnoble-doc-en}[2020/03/02 v1.3 updated by Ross]
+\ProvidesPackage{matnoble-doc-en}[2020/03/11 v1.4 updated by Ross]
 %% Blog
 % https://matnoble.me
 %% Gmail
@@ -10,14 +10,25 @@
 %% GitHub
 % https://github.com/MatNoble
 
-\RequirePackage[T1]{fontenc}
-\RequirePackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
 
-\RequirePackage{amsmath,amsthm,amsfonts,amssymb, bm}
+% 英文字体
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+% % 西文字体
+% \setmainfont{Times New Roman}
+% \setsansfont{Helvetica}  % Windows 下可使用类似的 Arial 字体
+% \setmonofont{Courier New}
+
+% 数学宏包
+\usepackage{amsmath,amsthm,amsfonts,amssymb,bm}
 
 % 公式字体
-\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo,amsbb,eucal]{mtpro2}
-% \usepackage{newtxtext,newtxmath} % New Times Roman
+% \usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo,amsbb,eucal]{mtpro2}
+\usepackage{newtxmath} % New Times Roman
 % \usepackage{mathptmx} % 打印 times
 % \usepackage{charter}  % 屏读
 % \usepackage{fourier}
@@ -88,6 +99,7 @@
 % 行距设置
 \RequirePackage{setspace}
 \setstretch{1.2}
+
 \setlength{\parskip}{3mm}
 \setlength{\parindent}{2em}
 
