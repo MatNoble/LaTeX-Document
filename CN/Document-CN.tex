@@ -231,68 +231,74 @@
 \clearpage
 \section{数学公式}
 
-\[
-    \int x^{2} \dif x
-\]
+\begin{itemize}
+    \item 积分符号使用 $\backslash$dif
+    
+    \[
+        \int x^{2} \dif x
+    \]
 
-为证 $a = b$, 需要证明
+    \item 为证 $a = b$, 需要证明
+    
+    {\bf 无标号}
+    \[
+        a < b + \epsilon \wedge b < a + \epsilon.
+    \]
+    
+    {\bf 有标号}
+    \begin{equation}
+        \label{eq:1}
+        a < b + \epsilon \land b < a + \epsilon.
+    \end{equation}
+    
+    \item PNP/Stokes 方程组
+    \begin{empheq}[left=\empheqlbrace]{align}
+        & \partial_{t} - \nabla\cdot[D_{i}(\nabla C_{i} + q_{i} \nabla
+        \Phi C_{i}) - \bmu C_{i}] = F_{i},
+        \\[3pt]
+        & -\nabla \cdot (\epsilon \nabla \Phi) = (C_{1} - C_{2}) + F_{3},
+        \\[3pt]
+        & \partial_{t}\bmu - \Delta \bmu + \nabla p = -(C_{1} -
+        C_{2})\nabla \Phi + F_{4},
+        \\[3pt]
+        & \nabla \cdot \bmu = 0.
+    \end{empheq}
+    
+    \item 带虚线的矩阵
 
-{\bf 无标号}
-\[
-    a < b + \epsilon, \and b < a + \epsilon.
-\]
+    \[
+        \left[
+          \begin{array}{c;{2pt/2pt}c}
+             \begin{matrix}
+                 1 & 12 & 3 & 8 \\
+                 14 & 5 & 16 &21\\
+                 7 & 18 & 9 &7 \\ \hdashline[2pt/2pt]
+                 23 & 0 & -1 &8\\
+             \end{matrix} &
+             \begin{matrix}
+                 1 & 4 \\
+                 2 & 5 \\
+                 3 & 6 \\ \hdashline[2pt/2pt]
+                 13 & 26 \\
+             \end{matrix}
+          \end{array}
+        \right]
+     \]
 
-{\bf 有标号}
-\begin{equation}
-    \label{eq:1}
-    a < b + \epsilon, \and b < a + \epsilon.
-\end{equation}
+     \item 分块矩阵
 
-\vskip2em
+     \[
+         \begin{bmatrix}
+             \begin{array}{c | c}
+               \boldsymbol{A}  &  \bm{\beta}  \\  \hline
+               \bm{\alpha}^{\mathsf T}   &  0
+             \end{array}
+         \end{bmatrix}
+     \]
 
-PNP/Stokes 方程组
-\begin{empheq}[left=\empheqlbrace]{align}
-    & \partial_{t} - \nabla\cdot[D_{i}(\nabla C_{i} + q_{i} \nabla
-    \Phi C_{i}) - \bmu C_{i}] = F_{i},
-    \\[3pt]
-    & -\nabla \cdot (\epsilon \nabla \Phi) = (C_{1} - C_{2}) + F_{3},
-    \\[3pt]
-    & \partial_{t}\bmu - \Delta \bmu + \nabla p = -(C_{1} -
-    C_{2})\nabla \Phi + F_{4},
-    \\[3pt]
-    & \nabla \cdot \bmu = 0.
-\end{empheq}
+ \end{itemize}
 
-带虚线的矩阵
-
-\[
-    \left[ \begin{array}{c;{2pt/2pt}c}
-              \begin{matrix}
-                  1 & 12 & 3 & 8 \\
-                  14 & 5 & 16 &21\\
-                  7 & 18 & 9 &7 \\ \hdashline[2pt/2pt]
-                  23 & 0 & -1 &8\\
-              \end{matrix}&
-              \begin{matrix}
-                  1 & 4 \\
-                  2 & 5 \\
-                  3 & 6 \\ \hdashline[2pt/2pt]
-                  13 & 26 \\
-              \end{matrix}
-           \end{array}
-    \right]
-\]
-
-分块矩阵
-
-\[
-    \begin{bmatrix}
-        \begin{array}{c | c}
-          \boldsymbol{A}  &  \bm{\beta}  \\  \hline
-          \bm{\alpha}^{\mathsf T}   &  0
-        \end{array}
-    \end{bmatrix}
-\]
+\S 更多相关知识请访问 \href{https://matnoble.me/series/latex/}{\LaTeX{} 排版“冷”知识}
 
 \clearpage
 \begin{thebibliography}{99}
