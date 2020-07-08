@@ -1,7 +1,15 @@
 %
 % 个人自用文档样式
 %
-\ProvidesPackage{matnoble-doc-cn}[2020/03/02 v1.3]
+\ProvidesPackage{matnoble-doc-cn}[2020/07/08 v1.4]
+%% Blog
+% https://matnoble.me
+%% Gmail
+% hustmatnoble@gmail.com
+%% GitHub
+% https://github.com/MatNoble
+
+\usepackage[T1]{fontenc}
 
 %================================== 设置中文字体 ===========================%
 % 将系统字体名映射为逻辑字体名称, 主要是为了维护的方便
@@ -14,7 +22,8 @@
 \setCJKmonofont{\fontnamemono}                        % 设置 CJK 的等宽字体
 %================================== 设置中文字体 ===========================%
 
-% ================================= 设置英文字体 ===========================% 
+% ================================= 设置英文字体 ===========================%
+\usepackage{fontspec}
 \setmainfont{Times New Roman}        % 西文默认衬线字体(serif)
 \setsansfont{Helvetica}              % 西文默认无衬线字体(sans serif), Windows 下可使用类似的 Arial 字体,
 \setmonofont{Courier New}            % 西文默认的等宽字体 
@@ -23,18 +32,16 @@
 % 开明式 标点
 \punctstyle{kaiming}
 
-% 自定义公式字体
 \setCJKfamilyfont{adhei}{Source Han Sans SC} % 开源的思源黑体 
 \newcommand{\adheiti}{\CJKfamily{adhei}}
 \setCJKfamilyfont{adkai}{KaiTi}  
 \newcommand{\adkaiti}{\CJKfamily{adkai}}
 
-\RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,bm}
 
 % 自定义公式字体
-\usepackage{newtxmath}
 % \usepackage{mathptmx} % 打印
-% \usepackage{charter}  % 屏读
+\usepackage{charter}  % 屏读
 % \usepackage{fourier}
 
 \RequirePackage{calrsfs, wasysym, verbatim, graphicx, geometry, empheq}
@@ -61,6 +68,9 @@
 \RequirePackage{anysize}
 % 中文随机文本
 \RequirePackage{zhlipsum}
+% 矩阵中虚线
+\RequirePackage{arydshln}
+
 
 % 调色板
 \RequirePackage{xcolor-material}

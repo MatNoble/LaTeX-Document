@@ -2,8 +2,7 @@
 \usepackage{matnoble-doc-cn}
 \begin{document}
 \title{\bf \LaTeX 中文文档模板} \author{\bf
-  \href{https://matnoble.me/about/}{数学小兵儿}}
-\date{}
+  \href{https://matnoble.me/about/}{数学小兵儿}} \date{}
 
 \maketitle
 \tableofcontents
@@ -264,12 +263,34 @@ PNP/Stokes 方程组
     & \nabla \cdot \bmu = 0.
 \end{empheq}
 
-矩阵
+带虚线的矩阵
+
+\[
+    \left[ \begin{array}{c;{2pt/2pt}c}
+              \begin{matrix}
+                  1 & 12 & 3 & 8 \\
+                  14 & 5 & 16 &21\\
+                  7 & 18 & 9 &7 \\
+                  23 & 0 & -1 &8\\
+              \end{matrix}&
+              \begin{matrix}
+                  1 & 4 \\
+                  2 & 5 \\
+                  3 & 6 \\
+                  13 & 26 \\
+              \end{matrix}
+           \end{array}
+    \right]
+\]
+
+分块矩阵
+
 \[
     \begin{bmatrix}
-        2 & -1 & 0\\
-        -1& 2  &-1\\
-        0 & -1 & 2
+        \begin{array}{c | c}
+          \boldsymbol{A}  &  \bm{\beta}  \\  \hline
+          \bm{\alpha}^{\mathsf T}   &  0
+        \end{array}
     \end{bmatrix}
 \]
 
@@ -287,18 +308,19 @@ PNP/Stokes 方程组
     \begin{listing}[ht]
         \begin{minted}[ frame=single, framesep=2mm,
             baselinestretch=1.2, bgcolor=MaterialBlue50,
-            rulecolor=MaterialBlue, fontsize=\footnotesize, linenos,
-            mathescape, autogobble ]{python}
+            rulecolor=MaterialBlue, fontsize=\footnotesize,
+            linenos, mathescape, autogobble ]{python}
             import matplotlib.pyplot as plt import numpy as np
-        
+    
             plt.figure(num = 1, figsize=(8, 6)) n =
             np.linspace(1,100,100) plt.plot(n, 1/n, 'bx')
             plt.xlabel(r'$ n $') plt.ylabel(r'$ \frac{1}{n} $')
-        
+    
             plt.figure(num = 2, figsize=(8, 6)) n =
             np.linspace(1,100,100) plt.plot(n, np.sin(n)/n, 'bx')
-            plt.xlabel(r'$ n $') plt.ylabel(r'$ \frac{\sin(n)}{n} $')
-        
+            plt.xlabel(r'$ n $')
+            plt.ylabel(r'$ \frac{\sin(n)}{n} $')
+    
             plt.show()
         \end{minted}
         \caption{\em Python}
@@ -307,15 +329,15 @@ PNP/Stokes 方程组
     \begin{listing}[ht]
         \begin{minted}[ frame=single, framesep=2mm,
             baselinestretch=1.2, bgcolor=MaterialBlue50,
-            rulecolor=MaterialBlue, fontsize=\footnotesize, linenos,
-            mathescape, autogobble, breaklines ]{matlab}
-            figure() plot(XX,YY,'k-'),hold on plot(XX',YY','k-'), hold
-            on B= plot(boundary(3,:), boundary(4,:), 'b.',
+            rulecolor=MaterialBlue, fontsize=\footnotesize,
+            linenos, mathescape, autogobble, breaklines ]{matlab}
+            figure() plot(XX,YY,'k-'),hold on plot(XX',YY','k-'),
+            hold on B= plot(boundary(3,:), boundary(4,:), 'b.',
             'markersize', 25); hold on I = plot(index(:,1),
-            index(:,2), 'r.', 'markersize',25); hold off axis equal
-            set(gca,'xtick',[],'ytick',[]) xlim(X) ylim(Y)
-            set(gca,'looseInset',[0 0.01 0 0.01]) h = legend([B, I],
-            'boundary nodes', 'inside nodes',
+            index(:,2), 'r.', 'markersize',25); hold off axis
+            equal set(gca,'xtick',[],'ytick',[]) xlim(X) ylim(Y)
+            set(gca,'looseInset',[0 0.01 0 0.01]) h = legend([B,
+            I], 'boundary nodes', 'inside nodes',
             'Location','bestoutside'); set(h, 'Fontsize', 10)
         \end{minted}
         \caption{\em Matlab}

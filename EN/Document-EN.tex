@@ -1,20 +1,17 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage{matnoble-doc-en}
+\usepackage{arydshln}
 \begin{document}
-% \title{\bf \textcolor{PrimaryColor}{A \LaTeX{} Document Templates}}
+
 \title{\bf {A \LaTeX{} Document Templates}} \author{\bf
-  \href{https://matnoble.me/about/}{Ross}}
-\date{}
+  \href{https://matnoble.me/about/}{Ross}} \date{}
 
 \pagestyle{fancy} \fancyhead[L]{\textcolor{PrimaryColor}{\LaTeX{}
     Templates}} \fancyhead[R]{\textcolor{PrimaryColor}{Ross}}
 
 \maketitle
 \tableofcontents
-% logo
-% \begin{figure}[b]
-%     \centering{\includegraphics[width=0.25\textwidth]{google.png}}
-% \end{figure}
+
 % footnote
 \footnote{\noindent \createtext{November 26, 2019} \newline
   \updatetext{\today}}.
@@ -24,6 +21,24 @@
 \listoflistings
 
 \clearpage
+
+\[
+    \left[ {\begin{array}{c;{2pt/2pt}c}
+              \begin{matrix}
+                  1 & 12 & 3 & 8 \\
+                  14 & 5 & 16 &21\\
+                  7 & 18 & 9 &7 \\
+                  23 & 0 & -1 &8\\
+              \end{matrix} &
+                             \begin{matrix}
+                                 1 & 4 \\
+                                 2 & 5 \\
+                                 3 & 6 \\
+                                 13 & 26 \\
+                             \end{matrix}
+            \end{array}}
+        \right]
+    \]
 
 \section{Random Text}
 \lipsum[2-4]
@@ -131,7 +146,7 @@
 
 \subsubsection{figure}
 \begin{figure}[H]
-    \centering \includegraphics[width=0.15\textwidth]{google.png}
+    \centering \includegraphics[width=0.15\textwidth]{logo.png}
     \caption{\em figure}
     \label{fig:mesh}
 \end{figure}
@@ -142,14 +157,14 @@
     \begin{subfigure}{.48\textwidth}
         \centering
         % include first image
-        \includegraphics[width=.3\linewidth]{google.png}
+        \includegraphics[width=.3\linewidth]{logo.png}
         \caption{\em subfigure 1}
         \label{fig:v21}
     \end{subfigure}
     \begin{subfigure}{.48\textwidth}
         \centering
         % include second image
-        \includegraphics[width=.3\linewidth]{google.png}
+        \includegraphics[width=.3\linewidth]{logo.png}
         \caption{\em subfigure 2}
         \label{fig:v22}
     \end{subfigure}
