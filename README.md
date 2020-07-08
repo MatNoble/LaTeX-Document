@@ -12,14 +12,13 @@
 
 ## 预览
 
-### 在线预览
-[点击这里](https://cn.overleaf.com/read/qcpjwfmmtnvr)
-
 ### 英文预览
 
 <img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-EN1.svg" title="英文首页预览" alt="数系家园LaTeX英文文档" width="500">
 
 <img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-EN2.svg" title="自定定理环境" alt="数系家园LaTeX英文文档" width="500">
+
+[更多预览](https://drive.google.com/file/d/1aq4GngbqB-ty3wNo9SMGSE3o_c6jwWtd/view)
 
 ### 中文预览
 
@@ -27,12 +26,14 @@
 
 <img src="https://raw.githack.com/MatNoble/LaTeX-Document/master/Images/Document-CN2.svg" title="图片并列" alt="数系家园LaTeX中文文档" width="500">
 
+[更多预览](https://drive.google.com/file/d/1Ox999cE1c-ULVYXXrcWTJJ_JSN8Ymidm/view)
+
 ## 使用说明
 
 `git clone git@github.com:MatNoble/LaTeX-Document.git` 到本地即可使用.
 
 ### 公式字体
-以下二选一
+
 ```
 \usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo,amsbb,eucal]{mtpro2}
 % \usepackage{newtxtext,newtxmath} % New Times Roman
@@ -41,14 +42,19 @@
 % \usepackage{fourier}
 ```
 
+*注: mtpro2 字体需自行安装*
+
 ### 中文字体
+
 中文版需要下载安装字体[在这里](https://github.com/MatNoble/Fonts)
 
-思源宋体
+- 思源宋体
 
-思源黑体
+- 思源黑体
 
-Kaiti
+- Kaiti
+
+思源字体是开源的，更好看的宋体和黑体。[由 Adobe 和 Google 合作开发](https://source.typekit.com/source-han-serif/cn/)
 
 ### 代码环境
 [Minted](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted) 是 Latex 上非常好用的代码高亮工具, 可以借助 Python 包 Pygement 根据不同的语法高亮.
