@@ -4,7 +4,7 @@
 
 为文章增加红, 蓝, 黄, 绿四色(Google 配色), 使文章不再单调. 定理部分借鉴[这里](https://github.com/kalxd/morelull)
 
-<img src="https://imgkr.cn-bj.ufileos.com/c4bef68f-6157-4981-b1d7-629e991ee838.png" width="400">
+<img src="https://raw.githubusercontent.com/MatNoble/Images/master/iShot2020-08-11%E4%B8%8B%E5%8D%8808.43.20.png" width="400">
 
 模板源代码有适当注释, 简单易懂, 易上手, 易自定义.
 
@@ -65,7 +65,7 @@
 
 效果如下:
 
-<img src="https://imgkr.cn-bj.ufileos.com/653a65d0-2cce-4909-8498-aa2301f9843f.png" title="代码环境" width="300">
+<img src="https://raw.githubusercontent.com/MatNoble/Images/master/iShot2020-08-11%E4%B8%8B%E5%8D%8808.45.56.png" title="代码环境" width="300"/>
 
 若不使用代码环境, 在对应的 `.sty` 文件中把对应代码注释掉即可.
 
