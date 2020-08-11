@@ -1,6 +1,5 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage{matnoble-doc-en}
-\usepackage{arydshln}
 \begin{document}
 
 \title{\bf {A \LaTeX{} Document Templates}} \author{\bf
@@ -262,12 +261,46 @@ Matrix
     \end{bmatrix}
 \]
 
+\[
+    \left[
+      \begin{array}{c;{2pt/2pt}c}
+        \begin{matrix}
+            1 & 12 & 3 & 8 \\
+            14 & 5 & 16 &21\\
+            7 & 18 & 9 &7 \\ \hdashline[2pt/2pt]
+            23 & 0 & -1 &8\\
+        \end{matrix} &
+                       \begin{matrix}
+                           1 & 4 \\
+                           2 & 5 \\
+                           3 & 6 \\ \hdashline[2pt/2pt]
+                           13 & 26 \\
+                       \end{matrix}
+      \end{array}
+    \right]
+\]
+
+\[
+    \begin{bmatrix}
+        \begin{array}{c | c}
+          \boldsymbol{A}  &  \bm{\beta}  \\  \hline
+          \bm{\alpha}^{\mathsf T}   &  0
+        \end{array}
+    \end{bmatrix}
+\]
+
 \clearpage
-\begin{thebibliography}{99}
-    \bibitem{1}
-    \bibitem{2}
-    \bibitem{3}
-\end{thebibliography}
+\section{BibTeX Style Refereences}
+
+FeniCS \cite{fenics}
+
+Garlerkin Finite Element Methonds for Parabolic Problems \cite{thomee}
+
+\clearpage
+% -%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%
+% References -%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%
+
+\bibliographystyle{IEEEtran} \bibliography{refe}
 
 \clearpage
 

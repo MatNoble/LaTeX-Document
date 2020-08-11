@@ -2,7 +2,7 @@
 % 个人自用文档样式
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{matnoble-doc-en}[2020/03/11 v1.4 updated by Ross]
+\ProvidesPackage{matnoble-doc-en}[2020/08/11 v1.5 updated by Ross]
 %% Blog
 % https://matnoble.me
 %% Gmail
@@ -70,8 +70,6 @@
 \RequirePackage{bigstrut}
 %% 在跨行表格中输入定界符
 \RequirePackage{bigdelim}
-% 界面微调算法, 更好看
-\RequirePackage{microtype}
 % 首行缩进
 \RequirePackage{indentfirst}
 % 设置浮动体的标题
@@ -86,6 +84,8 @@
 \setlist{nolistsep}
 % 英文随机文本
 \RequirePackage{lipsum}
+% 矩阵虚线
+\RequirePackage{arydshln}
 
 \RequirePackage[title,titletoc]{appendix}
 
@@ -136,7 +136,7 @@
 
 \allowdisplaybreaks
 
-\renewcommand{\theequation}{\thesection.\arabic{equation}}
+% \renewcommand{\theequation}{\thesection.\arabic{equation}}
         
 \newtheoremstyle{thmm}{1.5ex plus 1ex minus .2ex}{1.5ex plus 1ex minus
 .2ex}{\rmfamily}{}{\bfseries}{}{1em}{}
@@ -201,7 +201,7 @@
   colorlinks=true,
   linkcolor=GoogleRed,
   urlcolor=GoogleBlue,
-  filecolor=GoogleGreen,
+  % filecolor=GoogleGreen,
 }
 
 %%% 代码高亮设置 %%%
