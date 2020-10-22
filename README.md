@@ -46,13 +46,11 @@
 
 ### 中文字体
 
-中文版需要下载安装字体[在这里](https://github.com/MatNoble/Fonts)
+中文版需要下载并安装下列字体
 
-- 思源宋体
+- [思源宋体](https://github.com/adobe-fonts/source-han-serif/releases/tag/1.001R)
 
-- 思源黑体
-
-- Kaiti
+- [思源黑体](https://github.com/adobe-fonts/source-han-sans/releases/tag/2.001R)
 
 思源字体是开源的，更好看的宋体和黑体。[由 Adobe 和 Google 合作开发](https://source.typekit.com/source-han-serif/cn/)
 
