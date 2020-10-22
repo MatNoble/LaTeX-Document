@@ -1,10 +1,9 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage{matnoble-doc-mini}
+\pagestyle{empty}
 
 \begin{document}
-\title{\bf A simple tex templates}
-\author{MatNoble}
-\date{\today}
+\title{\bf A simple tex templates} \author{MatNoble} \date{\today}
 
 \maketitle
 \tableofcontents
@@ -14,5 +13,71 @@
 \section{The first section}
 
 bla bla
+
+\clearpage
+
+% $\bsA^{\mathsf{T}}$
+
+$\pm$ \quad $\mp$
+
+$\partial$ \quad $\dif$
+
+$\int$ \quad $\oint$
+
+$\sum$ \quad $\prod$
+
+$\nabla$ \quad $\Delta$
+
+$x$ \quad $y$ \quad $z$
+
+$\pi$ \quad $\rme$ \quad $\rmi$
+
+$\alpha$ \quad $\beta$ \quad $\gamma$
+
+$\sin$ \quad $\cos$ \quad $\tan$
+
+\vskip 1em
+
+$ \left\{
+  \begin{aligned}
+      a_{11} x_{1} + a_{12} x_{2} + a_{13} x_{2} = b_{1}
+      \\[3pt]
+      a_{22} x_{3} + a_{23} x_{3} = b_{2}
+  \end{aligned}
+\right.  $
+
+\vskip 1em
+
+$\lVert \bmx \rVert_{2} = \sqrt{x_{1}^{2} + x_{2}^{2} + \cdots +
+  x_{n}^{2}}$
+
+\clearpage
+
+\[
+    \sin{x}=\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)!}{x}^{2n+1}=x-\frac{x^{3}}{3!}
+    +\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+{}\cdots
+\]
+
+\[
+    \ln{(x+1)}=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}{x}^{n}=x-\frac{x^{2}}{2!}
+    +\frac{x^{3}}{3!}-\frac{x^{4}}{4!}+{}\cdots
+\]
+
+Euler Equation:
+\begin{equation}
+    \mathrm{e}^{\mathrm{i}x}=\cos{x}+\mathrm{i}\sin{x}
+\end{equation}
+
+\[
+    \lim_{x\to0}\frac{\sqrt{1+2\tan{x}}-\sqrt{1+2\sin{x}}}{x\ln(1+x)-x^2}
+\]
+
+\[
+    \iint\limits_{D}\frac{1+xy}{1+x^2++y^2}\dif x\dif y.
+\]
+
+\begin{equation}
+    \sqrt{\sum_{i=1}^n (y^i -x^i )^2 }
+\end{equation}
 
 \end{document}
