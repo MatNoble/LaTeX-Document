@@ -1,16 +1,24 @@
 # LaTeX-Document 中英文科技文档模板
 
-<img src="https://latex.codecogs.com/svg.latex?\LaTeX" title="LaTeX" alt="ＬaTeX" />自用中英文文档模板(数学).
+<img src="https://cdn.jsdelivr.net/gh/matnoble/images/win/latex.png" title="LaTeX" alt="ＬaTeX" width=40/>
 
-为文章增加红, 蓝, 黄, 绿四色(Google 配色), 使文章不再单调. 定理部分借鉴[这里](https://github.com/kalxd/morelull)
+为文章增加红, 蓝, 黄, 绿四色(Google 配色), 使文章不再单调. 定理部分借鉴 [这里](https://github.com/kalxd/morelull)
 
 <img src="https://raw.githubusercontent.com/MatNoble/Images/master/iShot2020-08-11%E4%B8%8B%E5%8D%8808.43.20.png" width="400">
 
 模板源代码有适当注释, 简单易懂, 易上手, 易自定义.
 
-有任何问题, 欢迎提交[Issues](https://github.com/MatNoble/LaTeX-Document/issues)!
+有任何问题, 欢迎提交 [Issues](https://github.com/MatNoble/LaTeX-Document/issues)
 
-## 预览
+### 使用说明
+
+```shell
+git clone git@github.com:MatNoble/LaTeX-Document.git
+```
+克隆到本地即可使用.
+
+<details>
+<summary><b> 预览</b></summary>
 
 ### 英文预览
 
@@ -28,9 +36,10 @@
 
 [更多预览](https://drive.google.com/file/d/1Ox999cE1c-ULVYXXrcWTJJ_JSN8Ymidm/view)
 
-## 使用说明
+</details>
 
-`git clone git@github.com:MatNoble/LaTeX-Document.git` 到本地即可使用.
+<details>
+<summary><b>字体</b></summary>
 
 ### 公式字体
 
@@ -54,7 +63,11 @@
 
 思源字体是开源的，更好看的宋体和黑体。[由 Adobe 和 Google 合作开发](https://source.typekit.com/source-han-serif/cn/)
 
-### 代码环境
+</details>
+
+<details>
+<summary><b>代码环境</b></summary>
+
 [Minted](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted) 是 Latex 上非常好用的代码高亮工具, 可以借助 Python 包 Pygement 根据不同的语法高亮.
 需要安装 python, 然后使用工具安装 pygments. 这里假设你已经安装了 pip 和相关 Python.
 
@@ -73,18 +86,11 @@
 % \usemintedstyle{emacs}
 ```
 
-### Using Emacs as LaTeX editor
-
-#### Table
-
-[使用 Emacs 制作 LaTeX 表格](https://matnoble.me/posts/using-emacs-to-make-latex-table/)
-
-## 关注我吧
-
-<img src="https://raw.githubusercontent.com/MatNoble/Picture/master/wechat.gif" title="公众号: 数系家园" alt="公众号: 数系家园" width="300">
+</details>
 
 ## 授权情况
-本模板代码按[LPPL v1.3c 协议](https://github.com/MatNoble/LaTeX-Document/blob/master/LICENSE)授权
+本模板代码按 [LPPL v1.3c 协议](https://github.com/MatNoble/LaTeX-Document/blob/master/LICENSE) 授权
 
 ## 联系方式
-Mail: [hustmatnoble@gmail.com](mailto:hustmatnoble@gmail.com)
+- Blog: [MatNoble](https://matnoble.me/)  
+- Mail: [hustmatnoble@gmail.com](mailto:hustmatnoble@gmail.com)
