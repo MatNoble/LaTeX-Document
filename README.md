@@ -1,14 +1,12 @@
 # LaTeX-Document 中英文科技文档模板
 
-<img src="https://cdn.jsdelivr.net/gh/matnoble/images/win/latex.png" title="LaTeX" alt="ＬaTeX" width=40/>
+<img src="https://cdn.jsdelivr.net/gh/matnoble/images/win/matnoblelatex.png" title="LaTeX" alt="ＬaTeX" width=200/>
 
-为文章增加红, 蓝, 黄, 绿四色(Google 配色), 使文章不再单调. 定理部分借鉴 [这里](https://github.com/kalxd/morelull)
+> **特色:** 为文章增加红, 蓝, 黄, 绿四色(Google 配色), 使文章不再单调. 定理部分借鉴 [这里](https://github.com/kalxd/morelull)
 
 <img src="https://raw.githubusercontent.com/MatNoble/Images/master/iShot2020-08-11%E4%B8%8B%E5%8D%8808.43.20.png" width="400">
 
-模板源代码有适当注释, 简单易懂, 易上手, 易自定义.
-
-有任何问题, 欢迎提交 [Issues](https://github.com/MatNoble/LaTeX-Document/issues)
+模板源代码有适当注释, 简单易懂, 易上手, 易自定义. 有问题, 欢迎提交 [Issues](https://github.com/MatNoble/LaTeX-Document/issues)
 
 ### 使用说明
 
@@ -18,7 +16,7 @@ git clone git@github.com:MatNoble/LaTeX-Document.git
 克隆到本地即可使用.
 
 <details>
-<summary><b> 预览</b></summary>
+<summary><b>预览</b></summary>
 
 ### 英文预览
 
@@ -39,7 +37,7 @@ git clone git@github.com:MatNoble/LaTeX-Document.git
 </details>
 
 <details>
-<summary><b>字体</b></summary>
+<summary><b>字体问题</b></summary>
 
 ### 公式字体
 
@@ -92,5 +90,5 @@ git clone git@github.com:MatNoble/LaTeX-Document.git
 本模板代码按 [LPPL v1.3c 协议](https://github.com/MatNoble/LaTeX-Document/blob/master/LICENSE) 授权
 
 ## 联系方式
-- Blog: [MatNoble](https://matnoble.me/)  
+- Blog: [matnoble.me](https://matnoble.me/)  
 - Mail: [hustmatnoble@gmail.com](mailto:hustmatnoble@gmail.com)
