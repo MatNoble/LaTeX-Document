@@ -90,5 +90,5 @@ git clone git@github.com:MatNoble/LaTeX-Document.git
 本模板代码按 [LPPL v1.3c 协议](https://github.com/MatNoble/LaTeX-Document/blob/master/LICENSE) 授权
 
 ## 联系方式
-- Blog: [matnoble.me](https://matnoble.me/)  
+- Blog: [matnoble.github.io](https://matnoble.github.io/)  
 - Mail: [hustmatnoble@gmail.com](mailto:hustmatnoble@gmail.com)
