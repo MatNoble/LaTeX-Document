@@ -9,25 +9,38 @@
 %% GitHub
 % https://github.com/MatNoble
 
-\usepackage[T1]{fontenc}
-
 %================================== 设置中文字体 ===========================%
+\usepackage{fontspec}
 % 将系统字体名映射为逻辑字体名称, 主要是为了维护的方便
 \newcommand\fontnamesong{Source Han Serif SC}
 \newcommand\fontnamehei{Source Han Sans SC}
 \newcommand\fontnamemono{Source Han Sans SC}
-\newcommand\fontnamekai{KaiTi}
-\setCJKmainfont[Mapping = fullwidth-stop,BoldFont=\fontnamehei]{\fontnamesong} % 设置 CJK 正文字体　衬线字体
-\setCJKsansfont[BoldFont=\fontnamehei]{\fontnamekai}  % 设置 CJK 无衬线的字体
-\setCJKmonofont{\fontnamemono}                        % 设置 CJK 的等宽字体
+\setCJKmainfont[AutoFakeBold,Fallback=SimSun]{\fontnamesong}
+\setCJKsansfont{\fontnamehei}
+\setCJKmonofont{\fontnamemono}
 %================================== 设置中文字体 ===========================%
 
-% ================================= 设置英文字体 ===========================%
-% \usepackage{fontspec}
-% \setmainfont{Times New Roman}        % 西文默认衬线字体(serif)
-% \setsansfont{Helvetica}              % 西文默认无衬线字体(sans serif), Windows 下可使用类似的 Arial 字体,
-% \setmonofont{Courier New}            % 西文默认的等宽字体 
-% ================================= 设置英文字体 ===========================%
+%================================== 设置英文字体和数学字体 =================%
+% 防止 \eth 冲突
+\let\oldeth\eth
+\let\eth\relax
+\usepackage{amsmath,amsthm}
+\usepackage{verbatim,graphicx,geometry,empheq}
+\usepackage{unicode-math}
+\usepackage{kpfonts-otf}
+\let\eth\oldeth % 使用 kpfonts-otf 的 \eth 定义
+\setmainfont{KpRoman}[
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic
+]
+\setsansfont{KpSans}
+\setmonofont{KpMono}
+\setmathfont{KpMath}
+% 替换 bm 命令，使用 unicode-math 的粗体
+\let\bm\symbf % 或 \let\bm\symbf 取决于粗体风格需求
+%================================== 设置英文字体和数学字体 =================%
 
 % 开明式 标点
 \punctstyle{kaiming}
@@ -37,17 +50,6 @@
 \setCJKfamilyfont{adkai}{KaiTi}  
 \newcommand{\adkaiti}{\CJKfamily{adkai}}
 
-\usepackage{amsmath,amsthm,amsfonts,amssymb,bm}
-
-% 自定义公式字体
-% \usepackage{mathptmx} % 打印
-% \usepackage{charter}  % 屏读
-% \usepackage{fourier}
-
-\usepackage[osf]{newpxtext}
-\usepackage[vvarbb]{newpxmath}
-
-\RequirePackage{calrsfs, wasysym, verbatim, graphicx, geometry, empheq}
 \RequirePackage[nottoc]{tocbibind}
 %% 长表格
 \RequirePackage{longtable}
@@ -97,9 +99,28 @@
 \RequirePackage{minted}
 \usemintedstyle{emacs}
 \renewcommand\listoflistingscaption{源码列表}
+\setminted{
+  frame=single,
+  framesep=1pt,
+  fontsize=\small, % 调整为 \small 以适应 12pt 文档
+  bgcolor=MaterialBlue50,
+  breaklines=true,
+  tabsize=4
+}
 
 % 页面边距
-\geometry{tmargin=.75in, bmargin=.75in, lmargin=.75in, rmargin = .75in}
+\geometry{
+  a4paper,
+  textwidth=6.3in,
+  textheight=9in,
+  tmargin=0.75in,
+  bmargin=0.75in,
+  lmargin=0.75in,
+  rmargin=0.75in,
+  headheight=22pt,
+  headsep=10pt,
+  footskip=20pt
+}
 
 % 行距
 \RequirePackage{setspace}
@@ -366,58 +387,58 @@
 \newcommand{\bfZ}{\mathbf{Z}}
 
 % mathbfit (bm)
-\newcommand{\bma}{\bm{a}}
-\newcommand{\bmb}{\bm{b}}
-\newcommand{\bmc}{\bm{c}}
-\newcommand{\bmd}{\bm{d}}
-\newcommand{\bme}{\bm{e}}
-\newcommand{\bmf}{\bm{f}}
-\newcommand{\bmg}{\bm{g}}
-\newcommand{\bmh}{\bm{h}}
-\newcommand{\bmi}{\bm{i}}
-\newcommand{\bmj}{\bm{j}}
-\newcommand{\bmk}{\bm{k}}
-\newcommand{\bml}{\bm{l}}
-\newcommand{\bmm}{\bm{m}}
-\newcommand{\bmn}{\bm{n}}
-\newcommand{\bmo}{\bm{o}}
-\newcommand{\bmp}{\bm{p}}
-\newcommand{\bmq}{\bm{q}}
-\newcommand{\bmr}{\bm{r}}
-\newcommand{\bms}{\bm{s}}
-\newcommand{\bmt}{\bm{t}}
-\newcommand{\bmu}{\bm{u}}
-\newcommand{\bmv}{\bm{v}}
-\newcommand{\bmw}{\bm{w}}
-\newcommand{\bmx}{\bm{x}}
-\newcommand{\bmy}{\bm{y}}
-\newcommand{\bmz}{\bm{z}}
-\newcommand{\bmA}{\bm{A}}
-\newcommand{\bmB}{\bm{B}}
-\newcommand{\bmC}{\bm{C}}
-\newcommand{\bmD}{\bm{D}}
-\newcommand{\bmE}{\bm{E}}
-\newcommand{\bmF}{\bm{F}}
-\newcommand{\bmG}{\bm{G}}
-\newcommand{\bmH}{\bm{H}}
-\newcommand{\bmI}{\bm{I}}
-\newcommand{\bmJ}{\bm{J}}
-\newcommand{\bmK}{\bm{K}}
-\newcommand{\bmL}{\bm{L}}
-\newcommand{\bmM}{\bm{M}}
-\newcommand{\bmN}{\bm{N}}
-\newcommand{\bmO}{\bm{O}}
-\newcommand{\bmP}{\bm{P}}
-\newcommand{\bmQ}{\bm{Q}}
-\newcommand{\bmR}{\bm{R}}
-\newcommand{\bmS}{\bm{S}}
-\newcommand{\bmT}{\bm{T}}
-\newcommand{\bmU}{\bm{U}}
-\newcommand{\bmV}{\bm{V}}
-\newcommand{\bmW}{\bm{W}}
-\newcommand{\bmX}{\bm{X}}
-\newcommand{\bmY}{\bm{Y}}
-\newcommand{\bmZ}{\bm{Z}}
+\newcommand{\bma}{\symbf{a}}
+\newcommand{\bmb}{\symbf{b}}
+\newcommand{\bmc}{\symbf{c}}
+\newcommand{\bmd}{\symbf{d}}
+\newcommand{\bme}{\symbf{e}}
+\newcommand{\bmf}{\symbf{f}}
+\newcommand{\bmg}{\symbf{g}}
+\newcommand{\bmh}{\symbf{h}}
+\newcommand{\bmi}{\symbf{i}}
+\newcommand{\bmj}{\symbf{j}}
+\newcommand{\bmk}{\symbf{k}}
+\newcommand{\bml}{\symbf{l}}
+\newcommand{\bmm}{\symbf{m}}
+\newcommand{\bmn}{\symbf{n}}
+\newcommand{\bmo}{\symbf{o}}
+\newcommand{\bmp}{\symbf{p}}
+\newcommand{\bmq}{\symbf{q}}
+\newcommand{\bmr}{\symbf{r}}
+\newcommand{\bms}{\symbf{s}}
+\newcommand{\bmt}{\symbf{t}}
+\newcommand{\bmu}{\symbf{u}}
+\newcommand{\bmv}{\symbf{v}}
+\newcommand{\bmw}{\symbf{w}}
+\newcommand{\bmx}{\symbf{x}}
+\newcommand{\bmy}{\symbf{y}}
+\newcommand{\bmz}{\symbf{z}}
+\newcommand{\bmA}{\symbf{A}}
+\newcommand{\bmB}{\symbf{B}}
+\newcommand{\bmC}{\symbf{C}}
+\newcommand{\bmD}{\symbf{D}}
+\newcommand{\bmE}{\symbf{E}}
+\newcommand{\bmF}{\symbf{F}}
+\newcommand{\bmG}{\symbf{G}}
+\newcommand{\bmH}{\symbf{H}}
+\newcommand{\bmI}{\symbf{I}}
+\newcommand{\bmJ}{\symbf{J}}
+\newcommand{\bmK}{\symbf{K}}
+\newcommand{\bmL}{\symbf{L}}
+\newcommand{\bmM}{\symbf{M}}
+\newcommand{\bmN}{\symbf{N}}
+\newcommand{\bmO}{\symbf{O}}
+\newcommand{\bmP}{\symbf{P}}
+\newcommand{\bmQ}{\symbf{Q}}
+\newcommand{\bmR}{\symbf{R}}
+\newcommand{\bmS}{\symbf{S}}
+\newcommand{\bmT}{\symbf{T}}
+\newcommand{\bmU}{\symbf{U}}
+\newcommand{\bmV}{\symbf{V}}
+\newcommand{\bmW}{\symbf{W}}
+\newcommand{\bmX}{\symbf{X}}
+\newcommand{\bmY}{\symbf{Y}}
+\newcommand{\bmZ}{\symbf{Z}}
 
 % mathcal
 \newcommand{\calA}{\mathcal{A}}
