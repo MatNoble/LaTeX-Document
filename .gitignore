@@ -8,6 +8,16 @@
 
 *.lol
 
+*.xdv
+
+*.fls
+
+*.fdb_latexmk
+
+*.minted
+
+_minted/
+
 _minted-Document-EN/
 
 _minted-Document-CN/

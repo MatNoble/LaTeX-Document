@@ -1,7 +1,7 @@
 %
 % 个人自用文档样式
 %
-\ProvidesPackage{matnoble-doc-cn}[2020/07/08 v1.4]
+\ProvidesPackage{matnoble-doc-cn}[2025/09/29 v2.0]
 %% Blog
 % https://matnoble.github.io
 %% Gmail
@@ -23,10 +23,10 @@
 %================================== 设置中文字体 ===========================%
 
 % ================================= 设置英文字体 ===========================%
-\usepackage{fontspec}
-\setmainfont{Times New Roman}        % 西文默认衬线字体(serif)
-\setsansfont{Helvetica}              % 西文默认无衬线字体(sans serif), Windows 下可使用类似的 Arial 字体,
-\setmonofont{Courier New}            % 西文默认的等宽字体 
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}        % 西文默认衬线字体(serif)
+% \setsansfont{Helvetica}              % 西文默认无衬线字体(sans serif), Windows 下可使用类似的 Arial 字体,
+% \setmonofont{Courier New}            % 西文默认的等宽字体 
 % ================================= 设置英文字体 ===========================%
 
 % 开明式 标点
@@ -41,8 +41,11 @@
 
 % 自定义公式字体
 % \usepackage{mathptmx} % 打印
-\usepackage{charter}  % 屏读
+% \usepackage{charter}  % 屏读
 % \usepackage{fourier}
+
+\usepackage[osf]{newpxtext}
+\usepackage[vvarbb]{newpxmath}
 
 \RequirePackage{calrsfs, wasysym, verbatim, graphicx, geometry, empheq}
 \RequirePackage[nottoc]{tocbibind}
