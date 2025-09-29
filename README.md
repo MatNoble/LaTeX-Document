@@ -10,10 +10,15 @@
 
 ### 使用说明
 
+1. 克隆项目到本地
 ```shell
 git clone git@github.com:MatNoble/LaTeX-Document.git
 ```
-克隆到本地即可使用.
+
+2. 在目录中执行 
+```shell
+latexmk -xelatex your_file_name.tex
+```
 
 <details>
 <summary><b>预览</b></summary>
@@ -38,18 +43,6 @@ git clone git@github.com:MatNoble/LaTeX-Document.git
 
 <details>
 <summary><b>字体问题</b></summary>
-
-### 公式字体
-
-```
-\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo,amsbb,eucal]{mtpro2}
-% \usepackage{newtxtext,newtxmath} % New Times Roman
-% \usepackage{mathptmx} % 打印 times
-% \usepackage{charter}  % 屏读
-% \usepackage{fourier}
-```
-
-*注: mtpro2 字体需自行安装*
 
 ### 中文字体
 
@@ -92,3 +85,8 @@ git clone git@github.com:MatNoble/LaTeX-Document.git
 ## 联系方式
 - Blog: [matnoble.github.io](https://matnoble.github.io/)  
 - Mail: [hustmatnoble@gmail.com](mailto:hustmatnoble@gmail.com)
+
+## 打赏 Buy Me A Coffee
+如果该项目帮助了您，请作者喝杯咖啡吧 ☕️。
+
+<img src="./Images/appreciate.jpg" title="赞赏码" width="500"/>
